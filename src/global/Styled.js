@@ -12,7 +12,8 @@ const NavigationC = styled.nav`
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
-    padding: 2rem;`
+    padding: 2rem;
+    border-radius: 0.6rem;`
 
 const HeroSection = styled.div`
      background-image: url(${ chrisPainting });

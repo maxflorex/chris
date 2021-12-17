@@ -1,4 +1,5 @@
-import {ccIcon} from '../../../images/index'
+import {ccIcon, chrisPaint} from '../../../images/index'
+import newImage from '../../../images/chris-painting-web.jpg'
 
 export const data = [
     {
@@ -6,7 +7,7 @@ export const data = [
         title: 'Storm',
         date: 2021,
         medium: 'Oil on Canvas',
-        image:{ccIcon},
+        image: newImage,
         description:'Something about the artwork, etc.'
     },
     {
@@ -14,7 +15,7 @@ export const data = [
         title: 'Silver Tatch',
         date: 2021,
         medium: 'Oil on Canvas',
-        image:{ccIcon},
+        image: ccIcon,
         description:'Something about the artwork, etc.'
     },
     {
@@ -22,7 +23,7 @@ export const data = [
         title: 'New Era',
         date: 2021,
         medium: 'Oil on Canvas',
-        image:{ccIcon},
+        image:ccIcon,
         description:'Something about the artwork, etc.'
     },
     {
@@ -30,7 +31,7 @@ export const data = [
         title: 'Maxi',
         date: 2021,
         medium: 'Oil on Canvas',
-        image:{ccIcon},
+        image: ccIcon,
         description:'Something about the artwork, etc.'
     },
 

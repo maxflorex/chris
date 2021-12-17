@@ -1,15 +1,16 @@
 import React from 'react';
-import { Navigation } from '../global/Styled';
+import { NavigationC } from '../global/Styled';
 
-const Featured = ({ title }) => {
+const Featured = ({ title, imageSrc }) => {
     return (
-        <Navigation className="bg-red-600 p-2 w-full rounded-md">
-            <div className="m-4">
-                <h1 className="text-3xl font-serif uppercase font-bold p-4">
+        <NavigationC className="mx-4">
+            <div className="">
+                <img src={imageSrc} alt="Artwork Image" />
+                <h1 className="text-2xl font-serif uppercase font-bold p-4">
                     {title}
                 </h1>
             </div>
-        </Navigation>
+        </NavigationC>
     );
 };
 

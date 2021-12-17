@@ -7,8 +7,8 @@ const Footer = () => {
     return (
         <>
             <div className="bg-slate-900">
-                <div className="container flex p-16 flex-wrap justify-between mx-auto">
-                    <div className="self-center">
+                <div className="container flex p-16 flex-wrap justify-between mx-auto align-middle justify-items-center">
+                    <div className="justify-items-center aliggn-middle">
                         <img src={ccIcon} alt="Logo Short" width={120} />
                     </div>
 
@@ -31,7 +31,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bg-slate-800 p-2 mx-auto">
-                <h1 className='text-sm k text-center'>Art Cayman Co. 2022 - All rights reserved</h1>
+                <h1 className="text-sm k text-center">
+                    Art Cayman Co. 2022 - All rights reserved
+                </h1>
             </div>
         </>
     );
