@@ -1,6 +1,5 @@
 import { Navbar, Hero , Carousel, Contact, Footer, Featured, AllFeatured } from './components/index'
 import './index.css'
-import { Helmet } from 'react-helmet'
 import { ccIcon } from './images/index'
 
 

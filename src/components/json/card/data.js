@@ -1,5 +1,4 @@
-import {ccIcon, chrisPaint} from '../../../images/index'
-import newImage from '../../../images/chris-painting-web.jpg'
+import {ccIcon, chrisPaint, artYellow, artStorm, artBlue} from '../../../images/index'
 
 export const data = [
     {
@@ -7,7 +6,7 @@ export const data = [
         title: 'Storm',
         date: 2021,
         medium: 'Oil on Canvas',
-        image: newImage,
+        image: artStorm,
         description:'Something about the artwork, etc.'
     },
     {
@@ -15,7 +14,15 @@ export const data = [
         title: 'Silver Tatch',
         date: 2021,
         medium: 'Oil on Canvas',
-        image: ccIcon,
+        image: artBlue,
+        description:'Something about the artwork, etc.'
+    },
+    {
+        id: 2,
+        title: 'Silver Tatch',
+        date: 2021,
+        medium: 'Oil on Canvas',
+        image: artBlue,
         description:'Something about the artwork, etc.'
     },
     {
@@ -23,7 +30,7 @@ export const data = [
         title: 'New Era',
         date: 2021,
         medium: 'Oil on Canvas',
-        image:ccIcon,
+        image: chrisPaint,
         description:'Something about the artwork, etc.'
     },
     {
@@ -31,8 +38,32 @@ export const data = [
         title: 'Maxi',
         date: 2021,
         medium: 'Oil on Canvas',
-        image: ccIcon,
+        image: artYellow,
         description:'Something about the artwork, etc.'
     },
-
+    {
+        id: 4,
+        title: 'Maxi',
+        date: 2021,
+        medium: 'Oil on Canvas',
+        image: artYellow,
+        description:'Something about the artwork, etc.'
+    },
+    {
+        id: 1,
+        title: 'Storm',
+        date: 2021,
+        medium: 'Oil on Canvas',
+        image: artStorm,
+        description:'Something about the artwork, etc.'
+    },
+    {
+        id: 2,
+        title: 'Silver Tatch',
+        date: 2021,
+        medium: 'Oil on Canvas',
+        image: artBlue,
+        description:'Something about the artwork, etc.'
+    },
+    
 ]

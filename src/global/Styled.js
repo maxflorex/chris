@@ -11,9 +11,9 @@ const Navigation = styled.nav`
 const NavigationC = styled.nav`
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-    padding: 2rem;
-    border-radius: 0.6rem;`
+    background-color: white;
+    border-radius: 0 0 0.4rem 0.4rem;
+    `
 
 const HeroSection = styled.div`
      background-image: url(${ chrisPainting });
@@ -22,5 +22,7 @@ const HeroSection = styled.div`
      background-color: #cccccc;
      min-height: 50vh;
 `
+
+
 
 export { Navigation, HeroSection, NavigationC }
