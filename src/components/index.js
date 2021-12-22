@@ -5,5 +5,6 @@ import Featured from './Featured'
 import Contact from './Contact'
 import Footer from './Footer'
 import AllFeatured from './AllFeatured'
+import Gallery from './Gallery'
 
-export  { Navbar, Hero, Carousel, Featured, Contact, Footer, AllFeatured  }
+export  { Navbar, Hero, Carousel, Featured, Contact, Footer, AllFeatured, Gallery  }

@@ -1,4 +1,4 @@
-import { Navbar, Hero , Carousel, Contact, Footer, Featured, AllFeatured } from './components/index'
+import { Navbar, Hero, Carousel, Contact, Footer, Featured, AllFeatured } from './components/index'
 import './index.css'
 import { ccIcon } from './images/index'
 

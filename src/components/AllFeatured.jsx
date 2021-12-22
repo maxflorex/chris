@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { data } from '../components/json/card/data';
 import Featured from './Featured';
-import { MdTexture } from 'react-icons';
 import { motion } from 'framer-motion';
 
 const AllFeatured = () => {
     return (
-        <motion.div
-        className="bg-slate-300">
+        <motion.div className="bg-slate-300">
             <div className="text-slate-800 flex justify-between pt-16 pb-16 container mx-auto items-center">
                 <div>
                     <div>
@@ -23,15 +21,20 @@ const AllFeatured = () => {
                     VIEW ALL
                 </button>
             </div>
-            {/* <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 items-start"> */}
-            <div className='container mx-auto masonry-1 md:masonry-2 lg:masonry pb-12'>
+
+            <div className="container mx-auto masonry-1 md:masonry-2 lg:masonry pb-12">
                 {data.map((data) => (
-                    <div className="break-inside pb-8" key={data.id}>
+                    <div
+                        className="break-inside pb-8 mx-2 md:mx-0"
+                        key={data.id}
+                    >
                         <Featured
                             title={data.title}
                             imageSrc={data.image}
-                            medium={data.medium}
                             artDate={data.date}
+                            medium={data.medium}
+                            desc={data.description}
+                            available={data.available}
                         />
                     </div>
                 ))}

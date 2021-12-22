@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeroSection, Navigation } from '../global/Styled';
 import { ccLogo } from '../images/index';
-import './img.css'
 
 const Hero = () => {
     return (
