@@ -1,9 +1,9 @@
-import { Navbar, Hero, Carousel, Contact, Footer, Featured, AllFeatured } from './components/index'
+import { Navbar, Hero, Carousel, Contact, Footer, Featured, AllFeatured, Gallery, Gallery2 } from './components/index'
 import './index.css'
-import { ccIcon } from './images/index'
 
 
 function App() {
+
   return (
     <div>
       <Navbar />
@@ -12,6 +12,7 @@ function App() {
       <Contact />
       <AllFeatured />
       <Footer />
+      {/* <Gallery2 /> */}
     </div>
   );
 }

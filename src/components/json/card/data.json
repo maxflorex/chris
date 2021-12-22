@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+        "id": 1,
+        "title": "Storm",
+        "date": 2021,
+        "medium": "Oil on Canvas",
+        "image": "https://source.unsplash.com/random/?dogs",
+        "description":"Something about the artwork, etc.",
+        "tag": "new",
+        "available": "Sold"
+        },
+        {
+        "id": 1,
+        "title": "Storm",
+        "date": 2021,
+        "medium": "Oil on Canvas",
+        "image": "https://source.unsplash.com/random/?cars",
+        "description":"Something about the artwork, etc.",
+        "tag": "new",
+        "available": "Sold"
+        },
+        {
+        "id": 1,
+        "title": "Storm",
+        "date": 2021,
+        "medium": "Oil on Canvas",
+        "image": "https://source.unsplash.com/random/?fruits",
+        "description":"Something about the artwork, etc.",
+        "tag": "new",
+        "available": "Sold"
+        },
+        {
+        "id": 1,
+        "title": "Storm",
+        "date": 2021,
+        "medium": "Oil on Canvas",
+        "image": "https://source.unsplash.com/random/?people",
+        "description":"Something about the artwork, etc.",
+        "tag": "new",
+        "available": "Sold"
+        },
+        {
+        "id": 1,
+        "title": "Storm",
+        "date": 2021,
+        "medium": "Oil on Canvas",
+        "image": "https://source.unsplash.com/random/?things",
+        "description":"Something about the artwork, etc.",
+        "tag": "new",
+        "available": "Sold"
+        },
+        {
+        "id": 1,
+        "title": "Storm",
+        "date": 2021,
+        "medium": "Oil on Canvas",
+        "image": "https://source.unsplash.com/random/?buildings",
+        "description":"Something about the artwork, etc.",
+        "tag": "new",
+        "available": "Sold"
+        }
+    ]
+}
