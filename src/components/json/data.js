@@ -1,4 +1,4 @@
-import {chrisPaint, artYellow, artStorm, artBlue} from '../../../images/index'
+import {chrisPaint, artYellow, artStorm, artBlue} from '../../images/index'
 
 export const data = [
     {

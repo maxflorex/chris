@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '../components/json/card/data';
+import { data } from './json/data';
 import Featured from './Featured';
 import { motion } from 'framer-motion';
 

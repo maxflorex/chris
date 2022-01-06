@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { data } from '../components/json/card/data';
+import { data } from './json/data';
 import { LightBox } from 'react-lightbox-pack';
-import "react-lightbox-pack/dist/index.css";
+import 'react-lightbox-pack/dist/index.css';
 
 const Gallery = () => {
     const [tag, setTag] = useState('all');
@@ -29,7 +29,7 @@ const Gallery = () => {
                 <TagButton name="featured" handleSetTag={setTag} />
             </div>
 
-            <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredImages.map((data, index) => (
                     <div key={data.id} className="">
                         <img
@@ -40,6 +40,7 @@ const Gallery = () => {
                                 lightBoxHandler(true, index);
                             }}
                         />
+                        <h1>{data.title}</h1>
                     </div>
                 ))}
                 <LightBox

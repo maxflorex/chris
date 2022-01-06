@@ -2,11 +2,12 @@ import React from 'react';
 import { FiArrowLeft, FiArrowRight, FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
+
 const Modal = ({
     clickedImg,
     setClickedImg,
     handleRotationRight,
-    handleRotationLeft
+    handleRotationLeft,
   }) => {
     const handleClick = (e) => {
         if (e.target.classList.contains('dismiss')) {
@@ -19,10 +20,9 @@ const Modal = ({
             <motion.div className="overlay dismiss" onClick={handleClick}>
                 {/* IMAGE */}
                 <img src={clickedImg} alt="Bigger one" className='rounded-md'/>
-
                 {/* X BUTTON */}
                 <span className="dismiss" onClick={handleClick}>
-                    <FiX className='text-white text-2xl'/>
+                    <FiX className='text-white text-2xl dismiss hover:animate-spin'/>
                 </span>
 
                 {/* RIGHT ARROW */}

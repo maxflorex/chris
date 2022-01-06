@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { chrisPainting } from '../images/index'
+import { data } from '../components/json/dataCollections';
+
+const imageUrl = data.image;
 
 const Navigation = styled.nav`
     backdrop-filter: blur(16px) saturate(180%);
@@ -23,6 +26,11 @@ const HeroSection = styled.div`
      min-height: 50vh;
 `
 
+const CollDiv = styled.div`
+    background-image: url(${imageUrl });
+    background-color: blue;
+`
 
 
-export { Navigation, HeroSection, NavigationC }
+
+export { Navigation, HeroSection, NavigationC, CollDiv }

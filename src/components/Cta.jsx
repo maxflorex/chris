@@ -1,0 +1,31 @@
+import React from 'react';
+import { accIconChris } from '../images/index';
+
+const Cta = () => {
+    return (
+        <div className="bg-slate-200 text-slate-900 pt-12 pb-12">
+            <div className="container mx-auto bg-white py-12 px-24 flex rounded-b-xl rounded-t-sm mb-8 drop-shadow-sm items-center gap-16">
+                <h1 className="text-3xl uppercase font-semibold tracking-widest text-center">
+                    Dare To Be <br />
+                    <span className="text-amber-500 text-6xl font-light">
+                        Unique
+                    </span>
+                </h1>
+                <p className="text-light p-8 text-left">
+                    Commissioning a painting is a very important event in
+                    client’s life. -
+                    <span className="italic font-semibold">
+                        Creating something truly unique together with an
+                        accomplished Artist is a meaningful, luxury experience.
+                    </span>
+                </p>
+                <div className="flex flex-col justify-center">
+                    <img src={accIconChris} alt="" className="w-full" />
+                    <button className='px-3 py-2 bg-slate-100 rounded-xl self-centered -mt-8'>Reach Out</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Cta;

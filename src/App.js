@@ -1,4 +1,4 @@
-import { Navbar, Hero, Carousel, Contact, Footer, Featured, AllFeatured, Gallery, Gallery2 } from './components/index'
+import { Navbar, Hero, Carousel, Contact, Footer, Featured, AllFeatured, Gallery, Gallery2, LandingPage, Navb, Cta, Collections, About } from './components/index'
 import './index.css'
 
 
@@ -6,13 +6,20 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+
+      <Navb />
       <Hero />
       <Carousel />
-      <Contact />
-      <AllFeatured />
+      <Cta />
+      <Collections />
+      <About />
+      {/* <Contact />
+      <AllFeatured /> */}
+      {/*     
+      <Gallery />
+      <Gallery2 /> */}
+      {/* <LandingPage /> */}
       <Footer />
-      {/* <Gallery2 /> */}
     </div>
   );
 }
