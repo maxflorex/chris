@@ -3,10 +3,10 @@ import { data } from './json/dataCollections';
 
 const Collections = () => {
     return (
-        <div className="bg-slate-900 py-16">
+        <div className="bg-slate-900 pt-16 pb-8 md:pb-16">
             <div className="container flex flex-row mx-auto justify-between">
                 <div className="container mx-auto">
-                    <div className="flex justify-between items-center mb-8">
+                    <div className="flex justify-between items-center mb-8 mx-4 md:mx-0">
                         <h1 className="uppercase tracking-widest">
                             view my{' '}
                             <span className="text-amber-500">
@@ -21,7 +21,7 @@ const Collections = () => {
                         </a> */}
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 my-12 gap-12">
+                    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 my-12 lg:gap-4md:gap-4 gap-4 mx-4 md:mx-0">
                         {data.map((data, index) => (
                             <div key={index}>
                                 <a href="/">
@@ -30,13 +30,13 @@ const Collections = () => {
                                         style={{
                                             backgroundImage: `url(${data.image})`,
                                         }}
-                                        className="rounded-t-lg hover:scale-105 transform-gpu transition-all duration-500 object-cover"
+                                        className="hover:scale-105 transform-gpu transition-all duration-500 object-cover rounded-b-lg rounded-t-sm overflow-hidden"
                                     >
-                                        <div className="flex justify-between items-center bg-gradient-to-t from-slate-900 transition-all duration-500 pt-64 px-4 pb-6">
+                                        <div className="flex justify-between items-center bg-slate-900 bg-opacity-90 backdrop-blur-md hover:backdrop-blur-none hover:bg-opacity-0 ease-in-out transition duration-500 pt-40 md:pt-64 px-4 pb-6 m-2 rounded-b-xl rounded-t-sm shadow-lg">
                                             <h4 className="text-xs bg-amber-500 px-3 py-1 rounded-full text-slate-900 tracking-widest">
                                                 {data.qty}
                                             </h4>
-                                            <h1 className="font-thin text-2xl uppercase tracking-widest hover:scale-100">
+                                            <h1 className="font-normal text-2xl uppercase tracking-widest hover:scale-100 drop-shadow-md">
                                                 {data.title}
                                             </h1>
                                         </div>

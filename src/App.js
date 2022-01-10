@@ -20,6 +20,7 @@ function App() {
       <Gallery2 /> */}
       {/* <LandingPage /> */}
       <Footer />
+
     </div>
   );
 }

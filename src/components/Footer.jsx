@@ -13,7 +13,7 @@ const Footer = () => {
                     </div>
 
                     <div className="self-center">
-                        <ul className="flex justify-around list-none text-slate-500 gap-8 text-2xl">
+                        <ul className="flex justify-around list-none text-slate-500 md:gap-8 gap-4 text-2xl">
                             <li className="cursor-pointer">
                                 <FiInstagram />
                             </li>
@@ -25,7 +25,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="self-center">
+                    <div className="self-center hidden md:block">
                         <img src={accIcon} alt="Logo Short" width={50} />
                     </div>
                 </div>

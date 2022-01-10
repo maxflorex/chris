@@ -70,3 +70,7 @@
   z-index: 999;
   margin: 2rem;
 }
+
+* {
+  box-sizing: border-box;
+}
