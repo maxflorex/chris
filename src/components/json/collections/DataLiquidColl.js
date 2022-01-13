@@ -2,7 +2,7 @@ import { Dance, HeartBurst, Liquid1, Liquid2, Liquid3, Liquid4, LiquidFields, Li
 
 const dataLiquid = [
     {
-        title: 'Springg Tide',
+        title: 'Spring Tide',
         image: SpringTide,
         size: '40X40',
         medium: 'Oil on canvas',

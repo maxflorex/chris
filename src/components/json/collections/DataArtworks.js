@@ -1,6 +1,6 @@
 import  { AfterGlow, CalmDay, CalmDay2, Wavy, Palm1, Beach1, BlowHoles, SevenMile, SevenMile2, Orchids, Palm2, CoconutTree, CoconutTree2, BathPan, BathPan2, BathPan3, Cassava, Grandma, MakingCassavaCake, OnTheBeach, PickingUp, TeaTime, ComplicatedLove, EmbarkedOnLove, FamilyRoots, FamilyTree, FamilyTree2, Party, TheBeggining, Together, Together4, Us, Us2, Dragon, BlueIguana, ADrift, ADrift2, BarkersBarracuda, Catboys, CatboysSunset, CatchingSprats, FishpotTiems, FishWithTheFlow, LineFishing, LineFishing2, NevilleScott, NoBounderies, SaltwaterCowboys, Saltwaters, Stryker, ThreeBoats, TurtleCrawl, TurtleCrawl2, YellowTail, Dance, HeartBurst, Liquid1, Liquid2, Liquid3, Liquid4, LiquidFields, LiquidMountain, Maternity, LiquidWaves, SpringTide, BlueLight, MeaningfulMemories, MeaningfulMemories2, MixedEmotions, Strong, SweetMemories, Timeline, Unborn, Unborn10, Unborn11, Unborn12, WithMyself } from '../../../images/Artworks'
 
-const data = [
+export const data = [
     // ABSTRACT
     {
         title: 'After Glow',
@@ -626,5 +626,3 @@ const data = [
         sold: false
     },
 ]
-
-export default data

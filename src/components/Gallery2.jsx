@@ -111,13 +111,17 @@ const Gallery2 = () => {
                 <div className="container mx-auto masonry-2 md:masonry-2 lg:masonry text-slate-900">
                     {data.map((data, index) => (
                         <div key={index} className="gap-2">
-                            <img
-                                src={data.image}
-                                alt={data.title}
-                                className="w-full object-cover rounded-md cursor-pointer"
-                                onClick={() => handleClick(data, index)}
-                            />
-                            <h2 className="text-xl m-2 tracking-wide">{data.title}</h2>
+                            <div>
+                                <img
+                                    src={data.image}
+                                    alt={data.title}
+                                    className="w-full object-cover rounded-md cursor-pointer"
+                                    onClick={() => handleClick(data, index)}
+                                />
+                                <h2 className="text-xl m-2 tracking-wide">
+                                    {data.title}
+                                </h2>
+                            </div>
                         </div>
                     ))}
                 </div>
