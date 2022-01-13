@@ -10,7 +10,7 @@ const Carousel = () => {
                     <h1 className="uppercase tracking-widest">
                         Latests <span className="text-amber-600">Artworks</span>{' '}
                     </h1>
-                    <a href="/" className="px-4 py-2 bg-amber-400 rounded-xl">
+                    <a href="/artworks" className="px-4 py-2 bg-amber-400 rounded-xl">
                         {' '}
                         Explore all Artworks
                     </a>

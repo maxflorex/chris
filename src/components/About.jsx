@@ -23,9 +23,9 @@ const About = () => {
                                     Director for The Galleries of The
                                     Ritz-Carlton, Grand Cayman.
                                 </p>
-                                <button className="btn uppercase bg-slate-900 md:mt-4 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 mt-6">
+                                <a href='/about'  className="btn uppercase bg-slate-900 md:mt-4 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 mt-6">
                                     Know More
-                                </button>
+                                </a>
                             </div>
                             <div className="px-8 pt-8 flex justify-center">
                                 <img

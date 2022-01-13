@@ -9,9 +9,11 @@ const Collections = () => {
                     <div className="flex justify-between items-center mb-8 mx-4 md:mx-0">
                         <h1 className="uppercase tracking-widest">
                             view my{' '}
-                            <span className="text-amber-500">
-                                Latest Collections
-                            </span>
+                            <a href="/collections">
+                                <span className="text-amber-500">
+                                    Latest Collections
+                                </span>
+                            </a>
                         </h1>
                         {/* <a
                             href="/"
@@ -21,22 +23,22 @@ const Collections = () => {
                         </a> */}
                     </div>
 
-                    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 my-12 lg:gap-4md:gap-4 gap-4 mx-4 md:mx-0">
+                    <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 my-12 md:gap-4 gap-4 mx-4 md:mx-0">
                         {data.map((data, index) => (
                             <div key={index}>
-                                <a href="/">
+                                <a href={data.link}>
                                     {/* FINALLY!!! DYNAMIC BACKGROUND!!! YESSSSS */}
                                     <div
                                         style={{
                                             backgroundImage: `url(${data.image})`,
                                         }}
-                                        className="hover:scale-105 transform-gpu transition-all duration-500 object-cover rounded-b-lg rounded-t-sm overflow-hidden"
+                                        className="hover:scale-105 transform-gpu transition-all duration-500 bg-cover rounded-b-lg rounded-t-sm overflow-hidden"
                                     >
-                                        <div className="flex justify-between items-center bg-slate-900 bg-opacity-90 backdrop-blur-md hover:backdrop-blur-none hover:bg-opacity-0 ease-in-out transition duration-500 pt-40 md:pt-64 px-4 pb-6 m-2 rounded-b-xl rounded-t-sm shadow-lg">
+                                        <div className="flex justify-between items-center bg-slate-900 bg-opacity-90 backdrop-blur-md hover:backdrop-blur-none hover:bg-opacity-0 ease-in-out transition duration-500 pt-32 md:pt-48 px-4 pb-6 m-2 rounded-b-xl rounded-t-sm shadow-lg">
                                             <h4 className="text-xs bg-amber-500 px-3 py-1 rounded-full text-slate-900 tracking-widest">
                                                 {data.qty}
                                             </h4>
-                                            <h1 className="font-normal text-2xl uppercase tracking-widest hover:scale-100 drop-shadow-md">
+                                            <h1 className="font-normal text-sm md:text-xl uppercase tracking-widest hover:scale-100 drop-shadow-md">
                                                 {data.title}
                                             </h1>
                                         </div>

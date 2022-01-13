@@ -1,6 +1,5 @@
 import React from 'react';
-import { ccIcon } from '../images/index';
-
+import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 
 const Navb = () => {
@@ -11,54 +10,58 @@ const Navb = () => {
                     {/* MENU */}
 
                     <div className="flex-row gap-8 text-xs items-center font-semiboldld tracking-widest text-slate-900 hidden md:flex">
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
+                            className="hover:scale-110 hover:text-amber-400 duration-500"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to="/artworks"
                             className="hover:scale-110 hover:text-amber-400 duration-500"
                         >
                             Explore
-                        </a>
-                        <a
-                            href="/"
+                        </Link>
+                        <Link
+                            to="/about"
                             className="hover:scale-110 hover:text-amber-400 duration-500"
                         >
                             About
-                        </a>
-                        <a
-                            href="/"
+                        </Link>
+                        <Link
+                            to="/collections"
                             className="hover:scale-110 hover:text-amber-400 duration-500"
                         >
                             Collections
-                        </a>
-                        <a
-                            href="/"
+                        </Link>
+                        <Link
+                            to="/contact"
                             className="bg-slate-300 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500"
                         >
                             Contact
-                        </a>
+                        </Link>
                     </div>
 
                     {/* BURGER */}
 
                     <div class="dropdown dropdown-hover md:hidden p-0">
-                        <div tabindex="0" class="my-2  bg-slate-900 p-2 rounded-lg hover:bg-amber-400 border-0">
-                            <HiOutlineMenuAlt4 />
+                        <div
+                            tabindex="0"
+                            class="my-2 bg-slate-300 p-2 rounded-lg hover:bg-amber-400 border-0"
+                        >
+                            <HiOutlineMenuAlt4 className='text-slate-900' />
                         </div>
                         <ul
                             tabindex="0"
-                            class="p-2 shadow menu dropdown-content bg-slate-800 rounded-box w-52"
+                            class="p-4 shadow menu dropdown-content bg-slate-900 rounded-box w-48 font-normal tracking-wider grid gap-4 ease-in-out transition-transform duration-500"
                         >
-                            <li>
-                                <a>EXPLORE</a>
-                            </li>
-                            <li>
-                                <a>ABOUT</a>
-                            </li>
-                            <li>
-                                <a>COLLECTIONS</a>
-                            </li>
-                            <li>
-                                <a>CONTACT</a>
-                            </li>
+
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/'>HOME</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/artworks'>EXPLORE</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/about'>ABOUT</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/collections'>COLLECTION</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/contact'>CONTACT</Link>
+
                         </ul>
                     </div>
 

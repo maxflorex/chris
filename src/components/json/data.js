@@ -1,4 +1,4 @@
-import {chrisPaint, artYellow, artStorm, artBlue} from '../../images/index'
+import { chrisPaint, artYellow, artStorm, artBlue } from '../../images/index'
 
 export const data = [
     {
@@ -7,9 +7,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artStorm,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'new',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
     {
         id: 2,
@@ -17,9 +18,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artBlue,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'featured',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
     {
         id: 3,
@@ -27,9 +29,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artBlue,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'new',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
     {
         id: 4,
@@ -37,9 +40,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: chrisPaint,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'all',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
     {
         id: 5,
@@ -47,9 +51,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artYellow,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'new',
-        available: 'Sold'
+        size: '24X36',
+        sold: false,
     },
     {
         id: 6,
@@ -57,9 +62,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artYellow,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'all',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
     {
         id: 7,
@@ -67,9 +73,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artStorm,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'new',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
     {
         id: 8,
@@ -77,9 +84,10 @@ export const data = [
         date: 2021,
         medium: 'Oil on Canvas',
         image: artBlue,
-        description:'Something about the artwork, etc.',
+        description: 'Something about the artwork, etc.',
         tag: 'new',
-        available: 'Sold'
+        size: '24X36',
+        sold: true,
     },
-    
+
 ]
