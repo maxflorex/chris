@@ -8,7 +8,7 @@ const Featured = ({ title, imageSrc, artDate, medium, desc, available }) => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="rounded-md bg-slate-100 drop-shadow-md flex flex-row"
+            className="rounded-md bg-slate-100 flex flex-row"
         >
             <div className="text-slate-800">
                 <img

@@ -7,7 +7,7 @@ const Hero = () => {
             <div className="mx-4 md:mx-0">
                 <div className="container md:mx-auto flex bg-[url('/src/images/All/cc-red-storm.jpg')] bg-cover rounded-b-xl rounded-t-sm items-center">
                     {/* GLASMORPHISM EFFECT */}
-                    <div className="bg-slate-300 shadow-lg m-3 rounded-b-lg rounded-t-sm bg-opacity-20 bg-clip-padding min-h-[33vh] w-full flex items-center backdrop-blur-md">
+                    <div className="bg-slate-100 shadow-lg m-3 rounded-b-lg rounded-t-sm bg-opacity-20 bg-clip-padding min-h-[60vh] w-full flex items-center backdrop-blur-md">
                         <div className="text-slate-900 w-full flex flex-col justify-center items-center">
                             <h1 className="font-light tracking-widest text-xl uppercase text-white pb-2">
                                 The Art of

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const AllFeatured = () => {
     return (
-        <motion.div className="bg-slate-300">
+        <motion.div className="bg-slate-100">
             <div className="text-slate-800 flex justify-between pt-16 pb-16 container mx-auto items-center">
                 <div>
                     <div>
@@ -17,7 +17,7 @@ const AllFeatured = () => {
                         </p>
                     </div>
                 </div>
-                <button className="hover:bg-slate-400 border-2  px-8 py-4 bg-white drop-shadow-sm rounded-md font-bold">
+                <button className="hover:bg-slate-400 border-2  px-8 py-4 bg-white rounded-md font-bold">
                     VIEW ALL
                 </button>
             </div>

@@ -37,13 +37,6 @@ const dataFamily = [
         sold: false
     },
     {
-        title: 'Party',
-        image: Party,
-        size: '24X36',
-        medium: 'Oil on canvas',
-        sold: false
-    },
-    {
         title: 'The Beggining',
         image: TheBeggining,
         size: '24X48',

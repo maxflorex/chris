@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const CatboatsFishing = () => {
     return (
         <div>
-            <motion.div className="bg-slate-300">
+            <motion.div className="bg-slate-100">
                 <div className="px-4">
 
                     <div className="text-slate-800 flex justify-between py-12 container mx-auto items-center">
@@ -20,7 +20,7 @@ const CatboatsFishing = () => {
                                 </p>
                             </div>
                         </div>
-                        <a href='/collections' className='btn uppercase bg-slate-900 md:mt-4 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 mt-6 border-0'>
+                        <a href='/collections' className='btn uppercase tracking-widest bg-slate-900 md:mt-4 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 mt-6 border-0'>
                            Explore Collections
                         </a>
                     </div>

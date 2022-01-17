@@ -36,7 +36,7 @@ const Navb = () => {
                         </Link>
                         <Link
                             to="/contact"
-                            className="bg-slate-300 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500"
+                            className="bg-slate-100 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500"
                         >
                             Contact
                         </Link>
@@ -46,14 +46,14 @@ const Navb = () => {
 
                     <div class="dropdown dropdown-hover md:hidden p-0">
                         <div
-                            tabindex="0"
-                            class="my-2 bg-slate-300 p-2 rounded-lg hover:bg-amber-400 border-0"
+                            tabIndex="0"
+                            className="my-2 bg-slate-100 p-2 rounded-lg hover:bg-amber-400 border-0"
                         >
                             <HiOutlineMenuAlt4 className='text-slate-900' />
                         </div>
                         <ul
-                            tabindex="0"
-                            class="p-4 shadow menu dropdown-content bg-slate-900 rounded-box w-48 font-normal tracking-wider grid gap-4 ease-in-out transition-transform duration-500"
+                            tabIndex="0"
+                            className="p-8 shadow menu dropdown-content bg-slate-900 bg-opacity-50 rounded-box backdrop-blur-md w-[50vw] font-light tracking-wider grid gap-4 ease-in-out transition-transform duration-500"
                         >
 
                             <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/'>HOME</Link>
@@ -72,9 +72,9 @@ const Navb = () => {
                             <input
                                 type="text"
                                 placeholder="Artwork Search"
-                                className="w-full active:bg-opacity-75 rounded-lg px-4 focus:bg-slate-300 bg-slate-300"
+                                className="focus:outline-none w-full focus:text-slate-900 active:bg-opacity-75 rounded-lg px-4 focus:bg-slate-100 bg-slate-100 focus:border-white focus:border-2"
                             />
-                            <button className="bg-slate-300 text-slate-900 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500">
+                            <button className="bg-slate-100 text-slate-900 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500">
                                 Search
                             </button>
                         </form>

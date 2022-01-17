@@ -44,42 +44,35 @@ const dataWoman = [
         sold: true
     },
     {
-        title:  'Timeline',
+        title: 'Timeline',
         image: Timeline,
         size: '18X30',
         medium: 'Oil on canvas',
         sold: true
     },
     {
-        title:  'Unborn',
-        image: Unborn,
-        size: '11X14',
-        medium: 'Oil on canvas',
-        sold: false
-    },
-    {
-        title:  'Unborn #10',
+        title: 'Unborn #10',
         image: Unborn10,
         size: '11X14',
         medium: 'Oil on canvas',
         sold: false
     },
     {
-        title:  'Unborn #11',
+        title: 'Unborn #11',
         image: Unborn11,
         size: '11X14',
         medium: 'Oil on canvas',
         sold: false
     },
     {
-        title:  'Unborn #12',
+        title: 'Unborn #12',
         image: Unborn12,
         size: '11X14',
         medium: 'Oil on canvas',
         sold: false
     },
     {
-        title:  'With Myself',
+        title: 'With Myself',
         image: WithMyself,
         size: '36X48',
         medium: 'Oil on canvas',

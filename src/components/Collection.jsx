@@ -8,7 +8,7 @@ const Collections = () => {
                 <div className="container mx-auto">
                     <div className="flex justify-between items-center mb-8 mx-4 md:mx-0">
                         <h1 className="uppercase tracking-widest">
-                            view my{' '}
+                            Explore my{' '}
                             <a href="/collections">
                                 <span className="text-amber-500">
                                     Latest Collections

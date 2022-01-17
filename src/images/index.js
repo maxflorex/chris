@@ -20,5 +20,6 @@ import patternInt from './All/interlaced.png'
 import cc1 from './All/cc1.jpg'
 import cc2 from './All/cc2.jpg'
 import cc3 from './All/cc3.jpg'
+import beachWaves from './All/beachbeach.jpg'
 
-export { ccIcon, chrisPainting, ccLogo, accIcon, chrisPaint, artStorm, artBlue, artYellow, ccLogoDark, ccLogoWhite, accIconChris, collFishing, collAbstract, collCatboats, collCaymanian, collLiquid, collWoman, chrisBw, patternInt,cc1, cc2, cc3 }
+export { ccIcon, chrisPainting, ccLogo, accIcon, chrisPaint, artStorm, artBlue, artYellow, ccLogoDark, ccLogoWhite, accIconChris, collFishing, collAbstract, collCatboats, collCaymanian, collLiquid, collWoman, chrisBw, patternInt,cc1, cc2, cc3, beachWaves }

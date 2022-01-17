@@ -4,9 +4,9 @@ import Modal from '../components/Modal';
 
 const Artworks = () => {
     // LOAD MORE
-    const [noOfElements, setNoOfElements] = useState(6);
+    const [noOfElements, setNoOfElements] = useState(10);
     const loadMore = () => {
-        setNoOfElements(noOfElements + 3)
+        setNoOfElements(noOfElements + noOfElements)
     }
     const slice = data.slice(0, noOfElements)
 
@@ -113,18 +113,28 @@ const Artworks = () => {
     };
 
     return (
-        <div className="pt-8 pb-16 bg-slate-200">
-            <div className="mx-4">
-                <div className="container mx-auto masonry-2 md:masonry-2 lg:masonry text-slate-900">
+        <div className="md:pt-8 md:pb-16 bg-slate-200">
+            <div className="mx-8 md:mx-4">
+                <div className='flex flex-col py-8 text-slate-900 text-center items-center justify-center'>
+                    <h2 data-tip="BROWSE BY COLLECTIONS" className='text-sm font-semibold tracking-wide bg-white px-4 py-2 m-4 rounded-md tooltip'>EXPLORE</h2>
+                    <h1 className='uppercase text-2xl tracking-widest text-amber-400 mt-4 md:mb-8'>Artworks by <span className='text-slate-900 font-semibold'>Chris Christian</span></h1>
+                </div>
+                <div className="container mx-auto columns-1 md:columns-2 lg:columns-2 text-slate-900 gap-8 lg:w-1/2">
                     {slice.map((data, index) => (
-                        <div key={index} className="gap-2">
-                            <img
-                                src={data.image}
-                                alt={data.title}
-                                className="w-full object-cover rounded-md cursor-pointer"
-                                onClick={() => handleClick(data, index)}
-                            />
-                            <h2 className="text-xl m-2 tracking-wide">{data.title}</h2>
+                        <div key={index} className="gap-2 my-8 md:my-4 rounded-md overflow-hidden break-inside-avoid">
+                            <div className='p-2 bg-white'>
+
+                                <div className="bg-slate-900 rounded-md overflow-hidden">
+
+                                    <img
+                                        src={data.image}
+                                        alt={data.title}
+                                        className="w-full object-cover cursor-pointer opacity-90 hover:scale-105 ease-out duration-300 hover:opacity-100 transform-gpu"
+                                        onClick={() => handleClick(data, index)}
+                                    />
+                                </div>
+                                <h2 className="text-lg m-2 tracking-wide">{data.title}</h2>
+                            </div>
                         </div>
                     ))}
                 </div>
