@@ -12,12 +12,12 @@ const About = () => {
                                 <h1 className="text-3xl tracking-wider font-light uppercase pb-4 md:pt-2 pt-8 text-amber-500">
                                     About Me
                                 </h1>
-                                <p className="font-light leading-relaxed text-lg">
+                                <p className="font-light leading-relaxed text-lg text-justify md:text-left text-slate-100">
                                     <span className="font-bold">
                                         Chris Christian is a passionate
                                         supporter of Cayman’s thriving
-                                        traditional and contemporary art scene.
-                                    </span>{' '}
+                                        traditional and contemporary art scene. 
+                                    </span>{'    '}
                                     A gifted painter in his own right, Chris
                                     employs his experience and skills as the Art
                                     Director for The Galleries of The

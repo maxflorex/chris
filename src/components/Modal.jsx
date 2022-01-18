@@ -32,14 +32,14 @@ const Modal = ({
                     className="rounded-md block max-w-[60vw] max-h-[80vh] m-auto"
                 />
                 <div className="absolute bottom-8">
-                    <h1 className="p-4 rounded-lg uppercase text-xl text-center">
+                    <h1 className="p-4 rounded-lg uppercase text-xl text-center text-slate-100">
                         {clickedTitle}
                     </h1>
                     <div className="flex gap-2 items-center justify-center">
-                        <h2 className="text-center bg-slate-800 p-2 rounded-lg">
+                        <h2 className="text-center bg-slate-900 p-2 rounded-lg text-slate-100">
                             {clickedSize}
                         </h2>
-                        <h2 className="text-center bg-slate-600 p-2 rounded-lg">
+                        <h2 className="text-center bg-slate-600 p-2 rounded-lg text-slate-100">
                             {clickedMedium}
                         </h2>
                         {clickedSold ? (

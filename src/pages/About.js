@@ -21,9 +21,9 @@ const About = () => {
                 </div>
             </div>
             <div className="flex justify-center">
-                <button className='btn -m-6 z-50'>Down</button>
+                <a href='#knowMore' className='btn -m-6 z-50'>Know More</a>
             </div>
-            <div className="xl:w-1/2 md:w-full mx-auto">
+            <div className="xl:w-1/2 md:w-full mx-auto" id='knowMore'>
                 <div className="container mx-auto py-16">
                     <div className='mx-4 md:mx-0'>
 

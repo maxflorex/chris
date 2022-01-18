@@ -22,48 +22,48 @@ export const data = [
         title: 'Abstract',
         image: abstractimg,
         qty: (dataAbstract.length),
-        link: '/collections/abstract'
+        link: '/abstract'
     },
     {
         title: 'Catboats & Fishing',
         image: catboatsfishingimg,
         qty: (dataFishing.length),
-        link: '/collections/catboats-fishing'
+        link: '/catboats-fishing'
     },
     {
         title: 'Cayman Memories',
         image: caymanmemoriesimg,
         qty: (dataCaymanMemories.length),
-        link: '/collections/cayman-memories'
+        link: '/cayman-memories'
     },
     {
         title: 'Liquid Flow',
         image: liquidimg,
         qty: (dataLiquid.length),
-        link: '/collections/liquid-flow'
+        link: '/liquid-flow'
     },
     {
         title: 'Woman',
         image: womanimg,
         qty: (dataWoman.length),
-        link: '/collections/woman'
+        link: '/woman'
     },
     {
         title: 'Fauna',
         image: faunaimg,
         qty: (dataFauna.length),
-        link: '/collections/fauna'
+        link: '/fauna'
     },
     {
         title: 'Family Tree',
         image: familytreeimg,
         qty: (dataFamily.length),
-        link: '/collections/family-tree'
+        link: '/family-tree'
     },
     {
         title: 'Beach',
         image: beachimg,
         qty: (dataBeach.length),
-        link: '/collections/beach'
+        link: '/beach'
     },
 ]

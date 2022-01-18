@@ -2,6 +2,7 @@ import { Dragon, BlueIguana } from "../../../images/FaunaImg";
 
 const dataFauna = [
     {
+        id: 1,
         title: 'Dragon Pride',
         image: Dragon,
         size: '48X52',
@@ -9,6 +10,7 @@ const dataFauna = [
         sold: true
     },
     {
+        id: 2,
         title: 'Blue Iguana',
         image: BlueIguana,
         size: '48X72',

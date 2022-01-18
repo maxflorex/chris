@@ -17,7 +17,7 @@ const Featured = ({ title, imageSrc, artDate, medium, desc, available }) => {
                     className="rounded-t-md"
                 />
                 <div className="flex items-center justify-between">
-                    <h1 className="text-2xl uppercase font-bold p-4">
+                    <h1 className="text-2xl uppercase font-bold p-8">
                         {title}
                     </h1>
                     <motion.button

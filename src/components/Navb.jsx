@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
+import { Outlet } from 'react-router-dom';
 
 const Navb = () => {
     return (
@@ -44,7 +45,7 @@ const Navb = () => {
 
                     {/* BURGER */}
 
-                    <div class="dropdown dropdown-hover md:hidden p-0">
+                    <div className="dropdown dropdown-hover md:hidden p-0">
                         <div
                             tabIndex="0"
                             className="my-2 bg-slate-100 p-2 rounded-lg hover:bg-amber-400 border-0"
@@ -56,11 +57,11 @@ const Navb = () => {
                             className="p-8 shadow menu dropdown-content bg-slate-900 bg-opacity-50 rounded-box backdrop-blur-md w-[50vw] font-light tracking-wider grid gap-4 ease-in-out transition-transform duration-500"
                         >
 
-                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/'>HOME</Link>
-                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/artworks'>EXPLORE</Link>
-                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/about'>ABOUT</Link>
-                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/collections'>COLLECTION</Link>
-                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500'  to='/contact'>CONTACT</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100'  to='/'>HOME</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100'  to='/artworks'>EXPLORE</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100'  to='/about'>ABOUT</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100'  to='/collections'>COLLECTION</Link>
+                            <Link className='hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100'  to='/contact'>CONTACT</Link>
 
                         </ul>
                     </div>
@@ -79,6 +80,7 @@ const Navb = () => {
                             </button>
                         </form>
                     </div>
+                    <Outlet />
                 </div>
             </div>
         </div>

@@ -6,22 +6,25 @@ import { motion } from 'framer-motion';
 const FamilyTree = () => {
     return (
         <div>
-            <motion.div className="bg-slate-100">
+            <motion.div className="bg-slate-200">
                 <div className="px-4">
 
                     <div className="text-slate-800 flex justify-between py-12 container mx-auto items-center">
                         <div>
                             <div>
                                 <h1 className="text-2xl font-black uppercase">
-                                    Featured Artworks
+                                    Family Tree
                                 </h1>
-                                <p className="font-ligh text-md">
-                                    Check out my newest artworks
-                                </p>
+                                <a href="/collections">
+
+                                    <p className="font-ligh text-md hover:text-amber-400">
+                                        Collections
+                                    </p>
+                                </a>
                             </div>
                         </div>
-                        <a href='/collections' className='btn uppercase tracking-widest bg-slate-900 md:mt-4 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 mt-6 border-0'>
-                           Explore Collections
+                        <a href='/artworks' className='btn uppercase tracking-widest bg-slate-900 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 border-0'>
+                            View All
                         </a>
                     </div>
 

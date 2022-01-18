@@ -115,8 +115,8 @@ const Artworks = () => {
     return (
         <div className="md:pt-8 md:pb-16 bg-slate-200">
             <div className="mx-8 md:mx-4">
-                <div className='flex flex-col py-8 text-slate-900 text-center items-center justify-center'>
-                    <h2 data-tip="BROWSE BY COLLECTIONS" className='text-sm font-semibold tracking-wide bg-white px-4 py-2 m-4 rounded-md tooltip'>EXPLORE</h2>
+                <div className='flex flex-col py-4 text-slate-900 text-center items-center justify-center'>
+                    <h2 data-tip="BROWSE BY COLLECTIONS" className='text-sm text-slate-100 font-semibold tracking-wide bg-slate-300 px-2 py-1 rounded-md tooltip'>EXPLORE</h2>
                     <h1 className='uppercase text-2xl tracking-widest text-amber-400 mt-4 md:mb-8'>Artworks by <span className='text-slate-900 font-semibold'>Chris Christian</span></h1>
                 </div>
                 <div className="container mx-auto columns-1 md:columns-2 lg:columns-2 text-slate-900 gap-8 lg:w-1/2">
@@ -138,9 +138,9 @@ const Artworks = () => {
                         </div>
                     ))}
                 </div>
-                <div className="flex items-center justify-center py-8">
+                <div className="flex items-center justify-center pb-8">
 
-                    <button className='btn bg-slate-600 hover:bg-slate-900'
+                    <button className='btn bg-slate-600 hover:bg-slate-900 mt-2'
                         onClick={() => loadMore()}
                     >Load More</button>
                 </div>
