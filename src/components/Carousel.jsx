@@ -1,5 +1,4 @@
 import React from 'react';
-import { artBlue } from '../images/index';
 import { data } from './json/dataLatest';
 
 const Carousel = () => {

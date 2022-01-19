@@ -1,5 +1,4 @@
 import React from 'react';
-import { DivDouble, Navigation } from '../global/Styled';
 
 const Contact = () => {
     return (

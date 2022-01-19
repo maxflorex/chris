@@ -18,9 +18,9 @@ const Contact = () => {
                                 <form action="https://formsubmit.co/max@maxflores.dev" method="POST"
                                     className='flex flex-col left-0 right-0 mx-auto w-full lg:w-3/4 gap-4 focus:border-white outline-none focus:boder-white'>
                                     <input type="hidden" name='_subject' value='New email!' />
-                                    <input type="text" name="name" required placeholder='Your email' className='p-4 text-slate-900 rounded-lg focus:border-2 focus:border-white outline-none' />
-                                    <input type="hidden" name='_next' value="/src/pages/ThankYou.js" />
-                                    <input type="email" name="email" required placeholder='Message' className='focus:outline-none p-4 text-slate-900 rounded-lg focus:border-2 focus:border-white' />
+                                    <input type="text" name="name" required placeholder='Message' className='p-4 text-slate-900 rounded-lg focus:border-2 focus:border-white outline-none' />
+                                    <input type="hidden" name='_next' value="/ThankYou.js" />
+                                    <input type="email" name="email" required placeholder='Email' className='focus:outline-none p-4 text-slate-900 rounded-lg focus:border-2 focus:border-white' />
                                     <button type="submit" className='p-4 bg-green-400 rounded-lg'>Send</button>
                                 </form>
                             </div>

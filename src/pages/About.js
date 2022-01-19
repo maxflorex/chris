@@ -1,6 +1,6 @@
 import React from 'react'
 import { ccLogoWhite } from '../images/index'
-import { chrisPainting, cc1, cc2, cc3 } from '../images/index'
+import { cc1, cc2, cc3 } from '../images/index'
 
 const About = () => {
     return (

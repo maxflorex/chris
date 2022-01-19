@@ -6,10 +6,9 @@ import Footer from './Footer'
 import AllFeatured from './AllFeatured'
 import Gallery from './Gallery'
 import Gallery2 from './Gallery2'
-import LandingPage from './LandingPage.jsx'
 import Navb from './Navb.jsx'
 import Cta from './Cta'
 import Collection from './Collection.jsx'
 import About from './About'
 
-export  { Hero, Carousel, Featured, Contact, Footer, AllFeatured, Gallery, Gallery2, LandingPage, Navb, Cta, Collection, About  }
+export  { Hero, Carousel, Featured, Contact, Footer, AllFeatured, Gallery, Gallery2, Navb, Cta, Collection, About  }

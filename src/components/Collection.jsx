@@ -32,7 +32,7 @@ const Collections = () => {
                                             <h4 className="text-xs bg-amber-500 px-3 py-1 rounded-full text-slate-900 tracking-widest mb-2 lg:mb-0">
                                                 {data.qty}
                                             </h4>
-                                            <h1 className="font-normal text-sm md:text-xl uppercase tracking-widest hover:scale-100 drop-shadow-md text-slate-100">
+                                            <h1 className="font-normal text-xs lg:text-sm md:text-xl text-center lg:text-left uppercase tracking-widest hover:scale-100 drop-shadow-md text-slate-100">
                                                 {data.title}
                                             </h1>
                                         </div>
