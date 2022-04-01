@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { data } from './json/data';
 import Featured from './Featured';
 import { motion } from 'framer-motion';

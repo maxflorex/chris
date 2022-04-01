@@ -11,4 +11,4 @@ import Cta from './Cta'
 import Collection from './Collection.jsx'
 import About from './About'
 
-export  { Hero, Carousel, Featured, Contact, Footer, AllFeatured, Gallery, Gallery2, Navb, Cta, Collection, About  }
+export  { Hero, Carousel, Featured, Contact, Footer, AllFeatured, Gallery, Gallery2, Navb, Cta, Collection, About }

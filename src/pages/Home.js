@@ -1,10 +1,11 @@
 import React from 'react'
-import { Hero, Carousel, Cta, Collection, About } from '../components/index'
+import { Carousel, Cta, Collection, About } from '../components/index'
+import Slider from '../components/Slider'
 
 const Home = () => {
     return (
         <div>
-            <Hero />
+            <Slider />
             <Carousel />
             <Cta />
             <Collection />

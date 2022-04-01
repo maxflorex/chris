@@ -7,6 +7,7 @@ import Collections from './pages/Collections/Collections';
 import Contact from './pages/Contact';
 import Artworks from './pages/Artworks';
 import ErrorPage from './pages/Collections/ErrorPage';
+import Dashboard from './pages/Dashboard';
 import { Abstract, Beach, CatboatsFishing, CaymanMemories, FamillyTree, Fauna, LiquidFlow, Woman } from './pages/Collections/index'
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path={'/cayman-memories'} element={<CaymanMemories />} />
         <Route path={'/liquid-flow'} element={<LiquidFlow />} />
         <Route path={'/woman'} element={<Woman />} />
+        <Route path={'/login'} element={<Dashboard />} />
         <Route path={'/fauna' }element={<Fauna />} />
         <Route path={'/family-tree'} element={<FamillyTree />} />
         <Route path={'/beach'} element={<Beach />} />
