@@ -1,5 +1,4 @@
 import { FormRegistration } from './forms/FormRegistration';
-import React from 'react';
 import { useState } from 'react';
 import {
     createUserWithEmailAndPassword,
@@ -9,7 +8,7 @@ import {
 } from 'firebase/auth';
 import { auth } from '../firebase/config';
 import Form from './forms/Form';
-
+import EditCollections from './EditCollections';
 export const Login = () => {
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
@@ -17,6 +16,7 @@ export const Login = () => {
     const [loginPassword, setLoginPassword] = useState('');
     const [user, setUser] = useState({});
     const [openRegForm, setOpenRegForm] = useState(false);
+    const [route, setRoute] = useState('');
 
     // PREVENTS USER TO AUTOMATICALLY LOGOUT
     onAuthStateChanged(auth, (currentUser) => {
@@ -67,22 +67,26 @@ export const Login = () => {
         setOpenRegForm(!openRegForm);
     };
 
-    const items = 'hover:bg-slate-300 rounded-md py-4 cursor-pointer font-bold';
+    const items =
+        'hover:bg-slate-400 rounded-md py-4 cursor-pointer font-bold active:bg-slate-600 uppercase px-4 md:px-0';
 
     return (
         <>
             <section className="bg-slate-200 p-8">
                 {/* REGISTER FORM */}
 
-               <FormRegistration  openRegForm={openRegForm} setRegisterEmail={setRegisterEmail} setRegisterPassword={setRegisterPassword} registerAccount={registerAccount} setOpenRegForm={setOpenRegForm}  />
+                <FormRegistration
+                    openRegForm={openRegForm}
+                    setRegisterEmail={setRegisterEmail}
+                    setRegisterPassword={setRegisterPassword}
+                    registerAccount={registerAccount}
+                    setOpenRegForm={setOpenRegForm}
+                />
 
                 {/* LOGIN FORM */}
 
                 {user === null && openRegForm === false ? (
-                    <form
-                        action=""
-                        className="flex flex-col gap-4 items-center my-16"
-                    >
+                    <form className="flex flex-col gap-4 items-center my-16">
                         <h1 className="text-2xl text-slate-900 text-center mb-2">
                             Login
                         </h1>
@@ -136,20 +140,52 @@ export const Login = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="flex text-slate-900 justify-between">
+                        <div className="flex flex-col md:flex-row text-slate-900 justify-between">
                             {/* PANEL */}
 
-                            <div className="p-8 rounded-xl md:w-[25vw] w-{40vw} min-h-[60vh] bg-slate-100 flex flex-col gap-4 text-center">
-                                <h1 className={items}>Add ArtWork</h1>
-                                <h1 className={items}>Add Collection</h1>
-                                <h1 className={items}>Collections</h1>
+                            <div className="p-8 rounded-xl w-full md:max-w-[25vw] xl:max-w-[20vw] bg-slate-100  gap-4 text-center flex md:flex-col justify-evenly md:justify-start">
+                                <button
+                                    onClick={() => setRoute(1)}
+                                    className={`${items} + ${
+                                        route === 1 && 'bg-slate-300'
+                                    }`}
+                                >
+                                    Add ArtWork
+                                </button>
+                                <button
+                                    onClick={() => setRoute(2)}
+                                    className={`${items} + ${
+                                        route === 2 && 'bg-slate-300'
+                                    }`}
+                                >
+                                    Edit Collections
+                                </button>
+                                <button
+                                    onClick={() => setRoute(3)}
+                                    className={`${items} + ${
+                                        route === 3 && 'bg-slate-300'
+                                    }`}
+                                >
+                                    Slider
+                                </button>
                             </div>
 
                             {/* PANEL ENDS */}
                             {/* CONTENT */}
 
-                            <div className="p-8 rounded-xl md:w-[75vw] w-{60vw}">
-                                <Form />
+                            <div className="p-8 rounded-xl xl:w-[80vw]  md:w-[75vw] w-full">
+                                {route === 1 ? (
+                                    <Form />
+                                ) : route === 2 ? (
+                                    <EditCollections />
+                                ) : route === 3 ? (
+                                    'Slider'
+                                ) : (
+                                    <div className='flex flex-col p-8 justify-center items-center'>
+                                       <h1 className='mb-16 font-bold up'>Artwork Time!</h1>
+                                       <img src="/undraw_skateboard_d6or.svg" alt="Welcome" className='md:w-1/2'/>
+                                    </div>
+                                )}
                             </div>
 
                             {/* CONTENT ENDS */}

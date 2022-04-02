@@ -9,6 +9,8 @@ import Artworks from './pages/Artworks';
 import ErrorPage from './pages/Collections/ErrorPage';
 import Dashboard from './pages/Dashboard';
 import { Abstract, Beach, CatboatsFishing, CaymanMemories, FamillyTree, Fauna, LiquidFlow, Woman } from './pages/Collections/index'
+import { Login } from './components/Login';
+import Form from './components/forms/Form';
 
 
 function App() {
