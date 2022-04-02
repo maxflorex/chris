@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { data } from './json/dataCollections';
-import { Abstract, Beach, Catboats, CaymanMemories, Fauna, FamilyTree, LiquidFlow, Woman } from './collections/index'
+import EditArtworks from './EditArtworks';
 
 
 const EditCollections = () => {
-    const [selectedCollection, setSelectedCollection] = useState('');
+    const [selectedCollection, setSelectedCollection] = useState('Abstract');
 
     return (
         <>
@@ -22,15 +22,7 @@ const EditCollections = () => {
                     </h1>
                 ])}
             </section>
-            <Abstract selectedCollection={selectedCollection} />
-            {/* {selectedCollection === 'Abstract' && <Abstract />}
-            {selectedCollection === 'Catboats & Fishing' && <Catboats />}
-            {selectedCollection === 'Cayman Memories' && <CaymanMemories />}
-            {selectedCollection === 'Liquid Flow' && <LiquidFlow />}
-            {selectedCollection === 'Family Tree' && <FamilyTree />}
-            {selectedCollection === 'Woman' && <Woman />}
-            {selectedCollection === 'Fauna' && <Fauna />}
-            {selectedCollection === 'Beach' && <Beach />} */}
+            <EditArtworks selectedCollection={selectedCollection} />
         </>
     );
 };

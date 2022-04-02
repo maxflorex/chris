@@ -7,20 +7,20 @@ import {
     doc,
     updateDoc,
 } from 'firebase/firestore';
-import { colRefArtwork } from '../../firebase/config';
-import FormSelectCollection from '../forms/FormSelectCollection';
+import { colRefArtwork } from '../firebase/config';
+import FormSelectCollection from './forms/FormSelectCollection';
 
-const Abstract = () => {
+const EditArtworks = ({ selectedCollection }) => {
     const [docs, setDocs] = useState([]);
     const [updateTitle, setUpdateTitle] = useState('');
     const [artCollection, setArtCollection] = useState('');
     const [updateH, setUpdateH] = useState('');
     const [updateW, setUpdateW] = useState('');
-
-    const [edit, setEdit] = useState(false);
+    const [edit, setEdit] = useState('');
+    const selected = selectedCollection.split(' ').join('');
 
     // DATA QUERY - GET ELEMENTS BY COLLECTION
-    const q = query(colRefArtwork, where('collection', '==', 'Abstract'));
+    const q = query(colRefArtwork, where('collection', '==', `${selected}`));
 
     // GET REAL TIME DATA - READ ELEMENTS
     useEffect(() => {
@@ -31,7 +31,7 @@ const Abstract = () => {
             });
             setDocs(artwork);
         });
-    }, []);
+    }, [selected]);
 
     // DELETE DOCUMENTS
     const deleteArtwork = async (id) => {
@@ -44,7 +44,7 @@ const Abstract = () => {
             title: updateTitle,
             wide: updateW,
             tall: updateH,
-            collection: artCollection,
+            collection: selected,
         })
             .then(() => {
                 alert('Updated!');
@@ -57,7 +57,7 @@ const Abstract = () => {
     // RESET EVERYTHING
     const reset = () => {
         setUpdateTitle('');
-        setEdit(false);
+        setEdit('');
         setUpdateH('');
         setUpdateW('');
         setArtCollection('');
@@ -66,9 +66,9 @@ const Abstract = () => {
     return (
         <>
             <h1 className="pt-16 text-center font-bold text-amber-600 uppercase">
-                Abstract Collection
+                {selectedCollection} Collection
             </h1>
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 py-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 py-8">
                 {docs.map((data) => (
                     <div key={data.id}>
                         <div className="relative">
@@ -78,19 +78,19 @@ const Abstract = () => {
                                 className="rounded-lg max-h-48 md:h-96 object-cover w-full"
                             />
                             <div className="flex flex-row gap-2 absolute bottom-0 right-0 m-4">
-                                {edit === false ? (
-                                    <button
-                                        className="btn btn-sm btn-info"
-                                        onClick={() => setEdit(!edit)}
-                                    >
-                                        EDIT
-                                    </button>
-                                ) : (
+                                {edit === data.id ? (
                                     <button
                                         className="btn btn-sm btn-accent"
                                         onClick={() => updateArtwork(data.id)}
                                     >
                                         UPDATE
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="btn btn-sm btn-info"
+                                        onClick={() => setEdit(data.id)}
+                                    >
+                                        EDIT
                                     </button>
                                 )}
                                 <button
@@ -102,7 +102,7 @@ const Abstract = () => {
                             </div>
                         </div>
 
-                        {edit !== false ? (
+                        {edit === data.id ? (
                             <>
                                 {/* TITTLE */}
                                 <input
@@ -152,7 +152,7 @@ const Abstract = () => {
                                 </div>
                             </>
                         )}
-                        {edit === true && (
+                        {edit === data.id && (
                             <button
                                 className="btn btn-warning btn-sm mt-4 mx-4"
                                 onClick={() => reset()}
@@ -167,4 +167,4 @@ const Abstract = () => {
     );
 };
 
-export default Abstract;
+export default EditArtworks;

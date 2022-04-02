@@ -18,23 +18,23 @@ const FormSelectCollection = ({ setArtCollection, artCollection }) => {
                 className="dropdown-content menu p-2 m-2 shadow bg-base-100 rounded-md w-52 text-white"
             >
                 <li>
-                    <a onClick={() => setArtCollection('Abstract')}>Abstract</a>
-                    <a onClick={() => setArtCollection('CatboatsFishing')}>
+                    <button onClick={() => setArtCollection('Abstract')}>Abstract</button>
+                    <button onClick={() => setArtCollection('Catboats&Fishing')}>
                         Catboats & Fishing
-                    </a>
-                    <a onClick={() => setArtCollection('CaymanMemories')}>
+                    </button>
+                    <button onClick={() => setArtCollection('CaymanMemories')}>
                         Cayman Memories
-                    </a>
-                    <a onClick={() => setArtCollection('LiquidFlow')}>
+                    </button>
+                    <button onClick={() => setArtCollection('LiquidFlow')}>
                         Liquid Flow
-                    </a>
-                    <a onClick={() => setArtCollection('Woman')}>Woman</a>
-                    <a onClick={() => setArtCollection('Fauna')}>Fauna</a>
-                    <a onClick={() => setArtCollection('FamilyTree')}>
+                    </button>
+                    <button onClick={() => setArtCollection('Woman')}>Woman</button>
+                    <button onClick={() => setArtCollection('Fauna')}>Fauna</button>
+                    <button onClick={() => setArtCollection('FamilyTree')}>
                         Family Tree
-                    </a>
-                    <a onClick={() => setArtCollection('Beach')}>Beach</a>
-                    <a onClick={() => setArtCollection('')}>- None -</a>
+                    </button>
+                    <button onClick={() => setArtCollection('Beach')}>Beach</button>
+                    <button onClick={() => setArtCollection('')}>- None -</button>
                 </li>
             </ul>
         </div>
