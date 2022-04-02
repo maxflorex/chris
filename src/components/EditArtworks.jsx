@@ -78,21 +78,37 @@ const EditArtworks = ({ selectedCollection }) => {
                                 className="rounded-lg max-h-48 md:h-96 object-cover w-full"
                             />
                             <div className="flex flex-row gap-2 absolute bottom-0 right-0 m-4">
-                                {edit === data.id ? (
-                                    <button
-                                        className="btn btn-sm btn-accent"
-                                        onClick={() => updateArtwork(data.id)}
-                                    >
-                                        UPDATE
-                                    </button>
-                                ) : (
+                                {edit !== data.id ? (
                                     <button
                                         className="btn btn-sm btn-info"
                                         onClick={() => setEdit(data.id)}
                                     >
                                         EDIT
                                     </button>
+                                ) : (
+                                    <>
+                                        {updateTitle === '' ||
+                                        updateH === '' ||
+                                        updateW === '' ? (
+                                            <button
+                                                className="btn btn-sm btn-ghost disabled"
+                                                onClick={() => setEdit(data.id)}
+                                            >
+                                                FILL OUT FORM
+                                            </button>
+                                        ) : (
+                                            <button
+                                                className="btn btn-sm btn-accent"
+                                                onClick={() =>
+                                                    updateArtwork(data.id)
+                                                }
+                                            >
+                                                UPDATE
+                                            </button>
+                                        )}
+                                    </>
                                 )}
+
                                 <button
                                     className="btn btn-sm border-0 btn-error"
                                     onClick={() => deleteArtwork(data.id)}

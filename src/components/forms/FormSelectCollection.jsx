@@ -2,6 +2,9 @@ import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 
 const FormSelectCollection = ({ setArtCollection, artCollection }) => {
+
+    const selector = 'btn'
+
     return (
         <div className="dropdown my-8">
             <div
@@ -11,31 +14,29 @@ const FormSelectCollection = ({ setArtCollection, artCollection }) => {
                 <h1>
                     {artCollection === '' ? 'Select Collection' : artCollection}
                 </h1>
-                <FiChevronDown />
+                <FiChevronDown className='hidden md:flex' />
             </div>
             <ul
                 tabIndex="0"
-                className="dropdown-content menu p-2 m-2 shadow bg-base-100 rounded-md w-52 text-white"
+                className="dropdown-content menu p-2 m-2 shadow bg-base-100 rounded-md w-52 text-white flex flex-col gap-2"
             >
-                <li>
-                    <button onClick={() => setArtCollection('Abstract')}>Abstract</button>
-                    <button onClick={() => setArtCollection('Catboats&Fishing')}>
-                        Catboats & Fishing
-                    </button>
-                    <button onClick={() => setArtCollection('CaymanMemories')}>
-                        Cayman Memories
-                    </button>
-                    <button onClick={() => setArtCollection('LiquidFlow')}>
-                        Liquid Flow
-                    </button>
-                    <button onClick={() => setArtCollection('Woman')}>Woman</button>
-                    <button onClick={() => setArtCollection('Fauna')}>Fauna</button>
-                    <button onClick={() => setArtCollection('FamilyTree')}>
-                        Family Tree
-                    </button>
-                    <button onClick={() => setArtCollection('Beach')}>Beach</button>
-                    <button onClick={() => setArtCollection('')}>- None -</button>
+                <li className={selector}onClick={() => setArtCollection('Abstract')}>Abstract</li>
+                <li className={selector}onClick={() => setArtCollection('Catboats&Fishing')}>
+                    Catboats & Fishing
                 </li>
+                <li className={selector}onClick={() => setArtCollection('CaymanMemories')}>
+                    Cayman Memories
+                </li>
+                <li className={selector}onClick={() => setArtCollection('LiquidFlow')}>
+                    Liquid Flow
+                </li>
+                <li className={selector}onClick={() => setArtCollection('Woman')}>Woman</li>
+                <li className={selector}onClick={() => setArtCollection('Fauna')}>Fauna</li>
+                <li className={selector}onClick={() => setArtCollection('FamilyTree')}>
+                    Family Tree
+                </li>
+                <li className={selector}onClick={() => setArtCollection('Beach')}>Beach</li>
+                <li className={selector}onClick={() => setArtCollection('')}>- None -</li>
             </ul>
         </div>
     );
