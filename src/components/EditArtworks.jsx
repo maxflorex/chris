@@ -109,12 +109,59 @@ const EditArtworks = ({ selectedCollection }) => {
                                     </>
                                 )}
 
-                                <button
-                                    className="btn btn-sm border-0 btn-error"
-                                    onClick={() => deleteArtwork(data.id)}
+                                {/* MODAL */}
+                                <label
+                                    htmlFor="my-modal-4"
+                                    className="btn modal-button btn-sm btn-error"
                                 >
                                     DELETE
-                                </button>
+                                </label>
+
+                                <input
+                                    type="checkbox"
+                                    id="my-modal-4"
+                                    className="modal-toggle"
+                                />
+                                <label
+                                    htmlFor="my-modal-4"
+                                    className="modal cursor-pointer"
+                                >
+                                    <label
+                                        className="modal-box relative"
+                                        htmlFor=""
+                                    >
+                                        <h1 className="text-white text-center text-xl font-bold pb-4">
+                                            Do you really want to delete this?
+                                        </h1>
+                                        <div className="flex gap-4 justify-center">
+                                            {/* CONTENT */}
+
+                                            <button
+                                                className="btn btn-sm border-0 btn-error"
+                                                onClick={() =>
+                                                    deleteArtwork(data.id)
+                                                }
+                                            >
+                                                YES, DELETE
+                                            </button>
+                                            <button
+                                                className="btn btn-sm border-0 btn-warning"
+                                                onClick={() => {
+                                                    document
+                                                        .getElementById(
+                                                            'my-modal-4'
+                                                        )
+                                                        .click();
+                                                }}
+                                            >
+                                                NO, CANCEL
+                                            </button>
+
+                                            {/* CONTENT END */}
+                                        </div>
+                                    </label>
+                                </label>
+                                {/* MODAL END */}
                             </div>
                         </div>
 

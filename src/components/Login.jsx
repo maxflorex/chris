@@ -9,6 +9,7 @@ import {
 import { auth } from '../firebase/config';
 import Form from './forms/Form';
 import EditCollections from './EditCollections';
+import EditSlider from './EditSlider';
 export const Login = () => {
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
@@ -71,8 +72,8 @@ export const Login = () => {
         'hover:bg-slate-400 rounded-md py-4 cursor-pointer font-bold active:bg-slate-600 uppercase px-4 md:px-0';
 
     return (
-        <>
-            <section className="bg-slate-200 p-8">
+        <div className='bg-slate-200 p-8'>
+            <section className='container mx-auto'>
                 {/* REGISTER FORM */}
 
                 <FormRegistration
@@ -166,7 +167,7 @@ export const Login = () => {
                                         route === 3 && 'bg-slate-300'
                                     }`}
                                 >
-                                    Slider
+                                    Main Slider
                                 </button>
                             </div>
 
@@ -179,11 +180,17 @@ export const Login = () => {
                                 ) : route === 2 ? (
                                     <EditCollections />
                                 ) : route === 3 ? (
-                                    'Slider'
+                                    <EditSlider />
                                 ) : (
-                                    <div className='flex flex-col p-8 justify-center items-center'>
-                                       <h1 className='mb-16 font-bold up'>Artwork Time!</h1>
-                                       <img src="/undraw_skateboard_d6or.svg" alt="Welcome" className='md:w-1/2'/>
+                                    <div className="flex flex-col p-8 justify-center items-center">
+                                        <h1 className="mb-16 font-bold up">
+                                            Artwork Time!
+                                        </h1>
+                                        <img
+                                            src="/undraw_skateboard_d6or.svg"
+                                            alt="Welcome"
+                                            className="md:w-1/2"
+                                        />
                                     </div>
                                 )}
                             </div>
@@ -193,6 +200,6 @@ export const Login = () => {
                     </>
                 )}
             </section>
-        </>
+        </div>
     );
 };
