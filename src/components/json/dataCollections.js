@@ -25,6 +25,12 @@ export const data = [
         link: '/abstract'
     },
     {
+        title: 'Beach',
+        image: beachimg,
+        qty: (dataBeach.length),
+        link: '/beach'
+    },
+    {
         title: 'Catboats & Fishing',
         image: catboatsfishingimg,
         qty: (dataFishing.length),
@@ -43,10 +49,10 @@ export const data = [
         link: '/liquid-flow'
     },
     {
-        title: 'Woman',
-        image: womanimg,
-        qty: (dataWoman.length),
-        link: '/woman'
+        title: 'Family Tree',
+        image: familytreeimg,
+        qty: (dataFamily.length),
+        link: '/family-tree'
     },
     {
         title: 'Fauna',
@@ -55,15 +61,10 @@ export const data = [
         link: '/fauna'
     },
     {
-        title: 'Family Tree',
-        image: familytreeimg,
-        qty: (dataFamily.length),
-        link: '/family-tree'
+        title: 'Woman',
+        image: womanimg,
+        qty: (dataWoman.length),
+        link: '/woman'
     },
-    {
-        title: 'Beach',
-        image: beachimg,
-        qty: (dataBeach.length),
-        link: '/beach'
-    },
+
 ]

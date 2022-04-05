@@ -1,9 +1,9 @@
-import React from 'react'
-import data from '../../components/json/collections/DataFishingCatboatsColl';
 import Featured from '../../components/CollCard';
 import { motion } from 'framer-motion';
+import UseFirestore from '../../components/hooks/UseFirestore';
 
 const CatboatsFishing = () => {
+    const { docs } = UseFirestore('Catboats&Fishing');
     return (
         <div>
             <motion.div className="bg-slate-200">
@@ -29,15 +29,15 @@ const CatboatsFishing = () => {
                     </div>
 
                     <div className="container mx-auto masonry-1 md:masonry-2 lg:masonry pb-12">
-                        {data.map((data) => (
+                        {docs.map((data) => (
                             <div
                                 className="break-inside pb-8 mx-2 md:mx-0"
                                 key={data.id}
                             >
                                 <Featured
                                     title={data.title}
-                                    imageSrc={data.image}
-                                    size={data.size}
+                                    imageSrc={data.url}
+                                    size={data.wide + 'X' + data.tall}
                                     medium={data.medium}
                                     sold={data.sold}
                                 />

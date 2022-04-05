@@ -4,6 +4,7 @@ import UploadArtwork from '../UploadArtwork';
 import FormSelectCollection from './FormSelectCollection';
 import { colRefArtwork } from '../../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
+import FormSelectMedium from './FormSelectMedium';
 
 const Form = () => {
     const [height, setHeight] = useState('');
@@ -11,7 +12,8 @@ const Form = () => {
     const [artworkName, setArtworkName] = useState('');
     const [myUrl, setMyUrl] = useState('');
     const [artCollection, setArtCollection] = useState('');
-    const [originalAvaibale, setOriginalAvailable] = useState(false);
+    const [originalAvaibale, setOriginalAvailable] = useState(true);
+    const [medium, setMedium] = useState('');
 
     // RESET FORM
     const reset = () => {
@@ -21,6 +23,7 @@ const Form = () => {
         setMyUrl('');
         setArtCollection('');
         setOriginalAvailable(false);
+        setMedium('');
     };
 
     // ON SUBMIT EVENT
@@ -33,10 +36,12 @@ const Form = () => {
             wide: width,
             collection: artCollection,
             url: myUrl,
+            medium: medium,
+            sold: originalAvaibale,
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Artwork Submitted!');
-            reset();            
+            reset();
         });
     };
 
@@ -62,22 +67,32 @@ const Form = () => {
                         artCollection={artCollection}
                     />
                 </div>
-                <div className="flex gap-4 mb-8">
-                    <input
-                        type="checkbox"
-                        className="toggle toggle-lg"
-                        onChange={() => setOriginalAvailable(!originalAvaibale)}
-                    />
-                    <h1>
-                        Original Artwork is
-                        {originalAvaibale === false ? ' Sold' : ' Available'}
-                    </h1>
+                <div className="flex mb-8 items-center gap-8">
+                    <div className="flex gap-2">
+                        <input
+                            type="checkbox"
+                            className="toggle toggle-lg"
+                            onChange={() =>
+                                setOriginalAvailable(!originalAvaibale)
+                            }
+                        />
+                        <h1>
+                            Original Artwork is
+                            {originalAvaibale === false
+                                ? ' Available'
+                                : ' Sold'}
+                        </h1>
+                    </div>
+                    <FormSelectMedium medium={medium} setMedium={setMedium} />
                 </div>
 
                 <UploadArtwork setMyUrl={setMyUrl} />
                 <div className="flex gap-4">
                     {artworkName && width && height && artCollection !== '' ? (
-                        <span className="btn btn-active bg-amber-400 border-0" onClick={handleSubmit}>
+                        <span
+                            className="btn btn-active bg-amber-400 border-0"
+                            onClick={handleSubmit}
+                        >
                             SEND
                         </span>
                     ) : (
@@ -106,7 +121,7 @@ const Form = () => {
                             </h1>
                         )}
                         {artCollection !== '' && <h1>{artCollection}</h1>}
-                        {originalAvaibale === false ? 'Sold' : 'Available'}
+                        {originalAvaibale === false ? 'Available' : 'Sold'}
                     </div>
                 </>
             )}

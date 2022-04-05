@@ -12,6 +12,14 @@ module.exports = {
                 dataImg: "url(${'data.img'})"
             }
         },
+        screens: {
+            'sm': '758px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280pxx',
+            '2xl': '1280px',
+        }
+
     },
     variants: {
         extend: {},

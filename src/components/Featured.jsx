@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Featured = ({ title, imageSrc, artDate, medium, desc, available }) => {
@@ -11,11 +11,7 @@ const Featured = ({ title, imageSrc, artDate, medium, desc, available }) => {
             className="rounded-md bg-slate-100 flex flex-row"
         >
             <div className="text-slate-800">
-                <img
-                    src={imageSrc}
-                    alt="Artwork"
-                    className="rounded-t-md"
-                />
+                <img src={imageSrc} alt="Artwork" className="rounded-t-md" />
                 <div className="flex items-center justify-between">
                     <h1 className="text-2xl uppercase font-bold p-8">
                         {title}

@@ -120,7 +120,7 @@ const Slideshow = ({
                     </div>
                 )}
                 {/* FROST & HERO */}
-                <div className="absolute z-12 pointer-events-none bg-slate-100 bg-opacity-20 min-h-[60vh] w-full flex items-center backdrop-blur-md">
+                <div className="absolute z-12 pointer-events-none bg-slate-100 bg-opacity-20 min-h-[60vh] w-full flex items-center backdrop-blur-lg">
                     <div className="text-slate-900 w-full flex flex-col justify-center items-center">
                         <h1 className="font-light tracking-widest text-xl uppercase text-white pb-2">
                             The Art of

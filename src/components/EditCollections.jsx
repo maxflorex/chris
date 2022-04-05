@@ -6,6 +6,8 @@ import EditArtworks from './EditArtworks';
 const EditCollections = () => {
     const [selectedCollection, setSelectedCollection] = useState('Abstract');
 
+    const tab = 'btn bg-slate-400 border-0'
+
     return (
         <>
             <section className="bg-slate-200 p-8">
@@ -15,7 +17,9 @@ const EditCollections = () => {
                 {data.map((data, index) => [
                     <h1
                         key={index}
-                        className="btn bg-slate-400 border-0"
+                        className={`${tab} + ${
+                            selectedCollection === data.title && 'bg-slate-300'
+                        }`}
                         onClick={() => setSelectedCollection(data.title)}
                     >
                         {data.title}

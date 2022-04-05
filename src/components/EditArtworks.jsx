@@ -18,6 +18,8 @@ const EditArtworks = ({ selectedCollection }) => {
     const [updateW, setUpdateW] = useState('');
     const [edit, setEdit] = useState('');
     const selected = selectedCollection.split(' ').join('');
+    const [myId, setMyId] = useState('');
+    const [imgToDelete, setImgToDelete] = useState('');
 
     // DATA QUERY - GET ELEMENTS BY COLLECTION
     const q = query(colRefArtwork, where('collection', '==', `${selected}`));
@@ -36,6 +38,8 @@ const EditArtworks = ({ selectedCollection }) => {
     // DELETE DOCUMENTS
     const deleteArtwork = async (id) => {
         await deleteDoc(doc(colRefArtwork, id));
+
+        document.getElementById('my-modal-4').click();
     };
 
     // UPDATE DOCUMENTS
@@ -113,6 +117,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                 <label
                                     htmlFor="my-modal-4"
                                     className="btn modal-button btn-sm btn-error"
+                                    onClick={() => setMyId(data)}
                                 >
                                     DELETE
                                 </label>
@@ -125,21 +130,27 @@ const EditArtworks = ({ selectedCollection }) => {
                                 <label
                                     htmlFor="my-modal-4"
                                     className="modal cursor-pointer"
+                                    data={data}
                                 >
                                     <label
-                                        className="modal-box relative"
+                                        className="modal-box relative flex flex-col items-center"
                                         htmlFor=""
                                     >
                                         <h1 className="text-white text-center text-xl font-bold pb-4">
                                             Do you really want to delete this?
                                         </h1>
+                                        <img
+                                            src={myId.url}
+                                            alt="Delete Image"
+                                            className="max-h-48 mb-8 rounded-md mt-2"
+                                        />
                                         <div className="flex gap-4 justify-center">
                                             {/* CONTENT */}
 
                                             <button
                                                 className="btn btn-sm border-0 btn-error"
                                                 onClick={() =>
-                                                    deleteArtwork(data.id)
+                                                    deleteArtwork(myId.id)
                                                 }
                                             >
                                                 YES, DELETE

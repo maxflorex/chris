@@ -10,6 +10,8 @@ import { auth } from '../firebase/config';
 import Form from './forms/Form';
 import EditCollections from './EditCollections';
 import EditSlider from './EditSlider';
+import EditFeaturedArtwork from './EditFeaturedArtwork';
+import Graph from './Graph';
 export const Login = () => {
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
@@ -169,6 +171,22 @@ export const Login = () => {
                                 >
                                     Main Slider
                                 </button>
+                                <button
+                                    onClick={() => setRoute(4)}
+                                    className={`${items} + ${
+                                        route === 4 && 'bg-slate-300'
+                                    }`}
+                                >
+                                    Featured Artworks
+                                </button>
+                                <button
+                                    onClick={() => setRoute(5)}
+                                    className={`${items} + ${
+                                        route === 5 && 'bg-slate-300'
+                                    }`}
+                                >
+                                    Statistics
+                                </button>
                             </div>
 
                             {/* PANEL ENDS */}
@@ -181,6 +199,10 @@ export const Login = () => {
                                     <EditCollections />
                                 ) : route === 3 ? (
                                     <EditSlider />
+                                ) : route === 4 ? (
+                                    <EditFeaturedArtwork />
+                                ) : route === 5 ? (
+                                    <Graph />
                                 ) : (
                                     <div className="flex flex-col p-8 justify-center items-center">
                                         <h1 className="mb-16 font-bold up">
