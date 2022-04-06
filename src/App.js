@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import { Abstract, Beach, CatboatsFishing, CaymanMemories, FamillyTree, Fauna, LiquidFlow, Woman } from './pages/Collections/index'
 import { Login } from './components/Login';
 import Form from './components/forms/Form';
+import Explore from './components/Explore';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path={'/family-tree'} element={<FamillyTree />} />
         <Route path={'/beach'} element={<Beach />} />
         <Route path={'/collections'} element={<Collections />} />
+        <Route path={'/explore'} element={<Explore />} />
         <Route path='*' element={<ErrorPage />} />
         <Route path={'/contact'} element={<Contact />} />
         <Route exact path={'/'} element={<Home />} />

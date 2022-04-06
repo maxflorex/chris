@@ -9,6 +9,7 @@ import {
 } from 'firebase/firestore';
 import { colRefArtwork } from '../firebase/config';
 import FormSelectCollection from './forms/FormSelectCollection';
+import FormSelectMedium from './forms/FormSelectMedium';
 
 const EditArtworks = ({ selectedCollection }) => {
     const [docs, setDocs] = useState([]);
@@ -19,7 +20,7 @@ const EditArtworks = ({ selectedCollection }) => {
     const [edit, setEdit] = useState('');
     const selected = selectedCollection.split(' ').join('');
     const [myId, setMyId] = useState('');
-    const [imgToDelete, setImgToDelete] = useState('');
+    const [medium, setMedium] = useState('')
 
     // DATA QUERY - GET ELEMENTS BY COLLECTION
     const q = query(colRefArtwork, where('collection', '==', `${selected}`));
@@ -48,7 +49,8 @@ const EditArtworks = ({ selectedCollection }) => {
             title: updateTitle,
             wide: updateW,
             tall: updateH,
-            collection: selected,
+            collection: artCollection,
+            medium: medium,
         })
             .then(() => {
                 alert('Updated!');
@@ -65,6 +67,7 @@ const EditArtworks = ({ selectedCollection }) => {
         setUpdateH('');
         setUpdateW('');
         setArtCollection('');
+        setMedium('')
     };
 
     return (
@@ -209,10 +212,19 @@ const EditArtworks = ({ selectedCollection }) => {
                                     />
                                 </div>
                                 {/* COLLECTION */}
-                                <FormSelectCollection
-                                    setArtCollection={setArtCollection}
-                                    artCollection={data.collection}
-                                />
+                                <div className="grid grid-cols-2 gap-4">
+                                    <FormSelectCollection
+                                        setArtCollection={setArtCollection}
+                                        artCollection={artCollection}
+                                        current={data.collection}
+                                    />
+                                        <FormSelectMedium 
+                                        setMedium={setMedium}
+                                        medium={medium}
+                                        current={data.medium}
+                                    
+                                        />
+                                </div>
                             </>
                         ) : (
                             <>

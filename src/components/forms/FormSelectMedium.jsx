@@ -1,7 +1,6 @@
 import React from 'react';
-import { FiChevronDown } from 'react-icons/fi';
 
-const FormSelectMedium = ({ setMedium, medium }) => {
+const FormSelectMedium = ({ setMedium, medium, current }) => {
     const selector = 'btn';
 
     return (
@@ -10,8 +9,7 @@ const FormSelectMedium = ({ setMedium, medium }) => {
                 tabIndex="0"
                 className="flex gap-4 btn bg-slate-300 border-0 text-slate-900 hover:bg-amber-400"
             >
-                <h1>{medium === '' ? 'Select Medium' : medium}</h1>
-                <FiChevronDown className="hidden md:flex" />
+                <h1>{medium !== '' ? medium : 'Select Medium'}</h1>
             </div>
             <ul
                 tabIndex="0"
@@ -35,10 +33,7 @@ const FormSelectMedium = ({ setMedium, medium }) => {
                 >
                     Mixed Media
                 </li>
-                <li
-                    className={selector}
-                    onClick={() => setMedium('Other')}
-                >
+                <li className={selector} onClick={() => setMedium('Other')}>
                     Other
                 </li>
             </ul>

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
+import { FiSearch } from 'react-icons/fi';
+import Modal from './Modal';
+import SearchModal from './SearchModal';
 
 const Navb = () => {
+    const [clicked, setClicked] = useState(false);
     const links = 'hover:scale-110 hover:text-amber-400 duration-500';
-    const linksDrop = 'hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100 font-bold ';
+    const linksDrop =
+        'hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100 font-bold ';
 
     return (
         <div className="bg-slate-200 py-4">
@@ -16,7 +21,7 @@ const Navb = () => {
                         <Link to="/" className={links}>
                             Home
                         </Link>
-                        <Link to="/artworks" className={links}>
+                        <Link to="/explore" className={links}>
                             Explore
                         </Link>
                         <Link to="/about" className={links}>
@@ -73,17 +78,11 @@ const Navb = () => {
                         {/* SEARCH */}
 
                         <div className="text-xs">
-                            <form action="" className="flex gap-2">
-                                <input
-                                    type="text"
-                                    placeholder="Artwork Search"
-                                    className="focus:outline-none w-full focus:text-slate-900 active:bg-opacity-75 rounded-lg px-4 focus:bg-slate-100 bg-slate-100 focus:border-white focus:border-2"
-                                />
-                                <button className="bg-slate-100 text-slate-900 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500">
-                                    Search
-                                </button>
-                            </form>
+                            <div className="bg-slate-100 text-slate-900 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500" onClick={() => setClicked(!clicked)}>
+                                <FiSearch className="text-slate-900" />
+                            </div>
                         </div>
+                        {clicked === true && <SearchModal setClicked={setClicked} clicked={clicked} />}
                     </section>
                 </div>
             </div>

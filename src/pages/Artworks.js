@@ -10,27 +10,15 @@ const Artworks = () => {
     }
     const slice = data.slice(0, noOfElements)
 
-    // FILTER STATES - TAG
-    const [tag, setTag] = useState('all');
-    const [filteredImages, setFilteredImages] = useState([]);
-
-    // INDEX & CLICKED IMAGE STATE
+      // INDEX & CLICKED IMAGE STATE
     const [clickedImg, setClickedImg] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(null);
-
     const [clickedTitle, setClickedTitle] = useState(null);
     const [clickedSize, setClickedSize] = useState(null);
     const [clickedMedium, setClickedMedium] = useState(null);
     const [clickedSold, setClickedSold] = useState(null);
 
-    // CONDITONS OF FILTER
-    useEffect(() => {
-        tag === 'all'
-            ? setFilteredImages(data)
-            : setFilteredImages(data.filter((image) => image.tag === tag));
-    }, [tag]);
-
-    // CLICK HANDLER
+      // CLICK HANDLER
     const handleClick = (data, index) => {
         setCurrentIndex(index);
         setClickedImg(data.image);
