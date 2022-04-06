@@ -5,7 +5,7 @@ const Contact = () => {
 
 
     return (
-        <div className='bg-slate-200 text-slate-900'>
+        <div className='bg-white text-slate-900  max-h-[80vh]'>
             <div className="bg-[url('/src/images/Collections/family-tree/ft-familytree2.jpg')] bg-cover -mb-2 relative">
                 <div className='backdrop-blur bg-slate-500 bg-opacity-50 min-h-[30vh] relative'>
                     <div className="bg-slate-200 md:absolute container left-0 right-0 mx-auto -bottom-[40%] rounded-t-sm rounded-b-lg">

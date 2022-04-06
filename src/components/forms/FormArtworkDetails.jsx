@@ -18,7 +18,7 @@ export const FormArtworkDetails = ({
                     onChange={(e) => {
                         setArtworkName(e.target.value);
                     }}
-                    className="input w-full max-w-xs text-white"
+                    className="input w-full max-w-xl text-white"
                     value={artworkName}
                 />
 

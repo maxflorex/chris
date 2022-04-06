@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 import { FiSearch } from 'react-icons/fi';
-import Modal from './Modal';
 import SearchModal from './SearchModal';
 
 const Navb = () => {
     const [clicked, setClicked] = useState(false);
     const links = 'hover:scale-110 hover:text-amber-400 duration-500';
     const linksDrop =
-        'hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100 font-bold ';
+        'hover:text-amber-400 hover:scale-110 ease-in-out transition-transform duration-500 text-slate-100 font-semibold ';
+
+        const handleClick = () => {
+            document.getElementById('dropdown').click();
+        }
 
     return (
         <div className="bg-slate-200 py-4">
@@ -40,31 +43,34 @@ const Navb = () => {
 
                     {/* BURGER */}
 
-                    <div className="dropdown dropdown-hover md:hidden p-0">
+                    <div className="dropdown md:hidden p-0">
                         <div
                             tabIndex="0"
-                            className="my-2 bg-slate-100 p-2 rounded-lg hover:bg-amber-400 border-0"
+                            className="my-2 bg-slate-100 rounded-lg hover:bg-amber-400 border-0 cursor-pointer"
                         >
-                            <HiOutlineMenuAlt4 className="text-slate-900" />
+                            <h1 className='bg-slate-100 text-slate-900 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500 text-xs'>MENU</h1>
                         </div>
                         <ul
                             tabIndex="0"
-                            className="p-8 shadow menu dropdown-content bg-slate-900 bg-opacity-50 rounded-box backdrop-blur-md w-[50vw] font-light tracking-wider grid gap-4 ease-in-out transition-transform duration-500"
+                            className="p-8 shadow menu dropdown-content bg-slate-900 bg-opacity-50 rounded-box backdrop-blur-md w-[50vw] font-light tracking-wider grid gap-4 content-center"
                         >
-                            <Link className={linksDrop} to="/">
+                            <Link className={linksDrop} onClick={handleClick} to="/">
                                 HOME
                             </Link>
-                            <Link className={linksDrop} to="/explore">
+                            <Link className={linksDrop} onClick={handleClick} to="/explore">
                                 EXPLORE
                             </Link>
-                            <Link className={linksDrop} to="/about">
+                            <Link className={linksDrop} onClick={handleClick} to="/about">
                                 ABOUT
                             </Link>
-                            <Link className={linksDrop} to="/collections">
+                            <Link className={linksDrop} onClick={handleClick} to="/collections">
                                 COLLECTION
                             </Link>
-                            <Link className={linksDrop} to="/contact">
+                            <Link className={linksDrop} onClick={handleClick} to="/contact">
                                 CONTACT
+                            </Link>
+                            <Link className={linksDrop} onClick={handleClick} to="/login">
+                                LOGIN
                             </Link>
                         </ul>
                     </div>

@@ -144,7 +144,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                         </h1>
                                         <img
                                             src={myId.url}
-                                            alt="Delete Image"
+                                            alt={myId.title}
                                             className="max-h-48 mb-8 rounded-md mt-2"
                                         />
                                         <div className="flex gap-4 justify-center">

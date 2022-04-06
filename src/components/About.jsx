@@ -27,7 +27,7 @@ const About = () => {
                                     Know More
                                 </a>
                             </div>
-                            <div className="px-8 pt-8 flex justify-center">
+                            <div className="px-8 pt-8 flex md:justify-end justify-center">
                                 <img
                                     src={chrisBw}
                                     alt="Chris Painting"

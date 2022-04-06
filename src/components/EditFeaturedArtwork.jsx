@@ -50,7 +50,7 @@ const EditFeaturedArtwork = () => {
             featured: true,
         })
             .then(() => {
-                alert('Added to featured!');
+                console.log('Added to featured!');
             })
             .finally(() => {
                 reset();
@@ -63,7 +63,7 @@ const EditFeaturedArtwork = () => {
             featured: false,
         })
             .then(() => {
-                alert('Removed from featured!');
+                console.log('Removed from featured!');
             })
             .finally(() => {
                 reset();
@@ -72,7 +72,7 @@ const EditFeaturedArtwork = () => {
 
     return (
         <>
-            <section className="bg-slate-200 p-8">
+            <section className="bg-slate-200 py-16">
                 <h1 className="text-2xl text-center font-bold">
                     Featured Artwork
                 </h1>

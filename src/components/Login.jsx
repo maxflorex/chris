@@ -127,7 +127,7 @@ export const Login = () => {
                         <div className="flex flex-col md:flex-row text-slate-900 justify-between">
                             {/* PANEL */}
 
-                            <div className="p-8 rounded-xl w-full md:max-w-[25vw] xl:max-w-[20vw] bg-slate-100  gap-4 text-center flex md:flex-col justify-evenly md:justify-start">
+                            <div className="p-8 rounded-xl w-full md:max-w-[25vw] xl:max-w-[20vw] bg-slate-100  gap-4 text-center flex md:flex-col justify-evenly md:justify-start flex-wrap">
                                 <button
                                     onClick={() => setRoute(1)}
                                     className={`${items} + ${
@@ -173,7 +173,7 @@ export const Login = () => {
                             {/* PANEL ENDS */}
                             {/* CONTENT */}
 
-                            <div className="p-8 rounded-xl xl:w-[80vw]  md:w-[75vw] w-full">
+                            <div className="p-2 rounded-xl xl:w-[80vw]  md:w-[75vw] w-full md:p-8 ">
                                 {route === 1 ? (
                                     <Form />
                                 ) : route === 2 ? (

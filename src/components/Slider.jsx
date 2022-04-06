@@ -1,5 +1,4 @@
 import Slideshow from './Slideshow';
-import data from './json/collections/DataAbstractColl';
 import { useEffect, useState } from 'react';
 import { onSnapshot, query, where } from 'firebase/firestore';
 import { colRefArtwork } from '../firebase/config';
@@ -24,7 +23,7 @@ const Slider = () => {
     const slide = 'overflow-hidden relative w-full';
 
     return (
-        <div className="bg-slate-200 pb-12">
+        <div className="bg-slate-200 md:pb-12 pb-0">
             <div className="container mx-auto rounded-xl">
                 <Slideshow autoplay={true}>
                     {slider && slider.map(({id, title, url}) => (

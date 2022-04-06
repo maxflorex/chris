@@ -1,12 +1,8 @@
 import { FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import {
-    doc,
     onSnapshot,
     query,
-    where,
-    updateDoc,
-    limit,
 } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { colRefArtwork } from '../firebase/config';
@@ -21,7 +17,6 @@ const SearchModal = ({ setClicked, clicked }) => {
 
     const [docs, setDocs] = useState([]);
     const [search, setSearch] = useState('');
-    const [selected, setSelected] = useState('');
 
     // DATA QUERY - GET ELEMENTS BY COLLECTION
     const q = query(colRefArtwork);

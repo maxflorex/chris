@@ -10,7 +10,7 @@ const EditCollections = () => {
 
     return (
         <>
-            <section className="bg-slate-200 p-8">
+            <section className="bg-slate-200 py-12">
                 <h1 className="text-2xl text-center font-bold">Collections</h1>
             </section>
             <section className="flex flex-wrap gap-4 items-center justify-center">

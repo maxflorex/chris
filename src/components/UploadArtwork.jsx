@@ -3,7 +3,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebase/config';
 import { FiDownloadCloud } from 'react-icons/fi';
 
-const UploadArtwork = ({setMyUrl}) => {
+const UploadArtwork = ({ setMyUrl, setImageUrl, imageUrl }) => {
     // UPLOAD FILES
     const uploadFiles = () => {
         document.getElementById('files').click();
@@ -11,7 +11,6 @@ const UploadArtwork = ({setMyUrl}) => {
 
     // PREVIEW IMAGE UPLOADED
     const [selectedImage, setSelectedImage] = useState(undefined);
-    const [imageUrl, setImageUrl] = useState(undefined);
 
     // GET IMAGE PREVIEW & TEMPORARY URL BASE ON FILE UPLOADED
     useEffect(() => {
@@ -50,7 +49,7 @@ const UploadArtwork = ({setMyUrl}) => {
             () => {
                 // UPLOAD COMPLETE - WE CAN GET URL NOW
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    setMyUrl(downloadURL);
+                    imageUrl(downloadURL);
                 });
             }
         );
@@ -62,14 +61,13 @@ const UploadArtwork = ({setMyUrl}) => {
     let txt =
         selectedImage === undefined ? 'Upload Artwork' : 'Artwork Uploaded!';
 
-
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     return (
         <div>
             <div className="flex gap-4 justify-center content-center items-center">
                 <h1 className="">{txt}</h1>
-                <div className="bg-slate-300 hover:bg-slate-100  p-4 rounded-2xl cursor-pointer">
+                <div className="bg-slate-300 hover:bg-slate-100 p-4 rounded-2xl cursor-pointer mb-8">
                     <FiDownloadCloud
                         onClick={uploadFiles}
                         className="text-4xl"
@@ -84,16 +82,18 @@ const UploadArtwork = ({setMyUrl}) => {
                     />
                 </div>
             </div>
-            <div className="mt-16 flex flex-col items-center">
-                <img
-                    src={imageUrl}
-                    alt={selectedImage}
-                    className="w-80 rounded-lg"
-                />
-                <h1 className="text-xs mt-8">
-                    {selectedImage === undefined ? '' : selectedImage.name}
-                </h1>
-            </div>
+            {imageUrl !== undefined && (
+                <div className="mt-16 flex flex-col items-center">
+                    <img
+                        src={imageUrl}
+                        alt={selectedImage}
+                        className="w-80 rounded-lg"
+                    />
+                    <h1 className="text-xs mt-8">
+                        {selectedImage === undefined ? '' : selectedImage.name}
+                    </h1>
+                </div>
+            )}
         </div>
     );
 };

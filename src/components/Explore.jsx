@@ -34,23 +34,21 @@ const Explore = () => {
         setVal(myVal);
         setMyIndex(myIndex);
     };
-    
+
     return (
         <div className="bg-slate-200 p-4 text-slate-900">
-            <div className="container mx-auto grid justify-items-center gap-2 my-16">
+            <div className="container mx-auto grid justify-items-center gap-2 md:my-16 my-8">
                 <span className="btn btn-sm border-0 bg-amber-400">
                     Explore
                 </span>
-                <h1 className="font-semibold text-2xl">
-                    Artworks by Chris Christian
-                </h1>
+                <h1 className="font-semibold text-xl md:text-2xl uppercase">By Chris Christian </h1>
             </div>
             <div className="grid grid-cols-2 w-full md:w-1/2 xl:w-1/4 mx-auto gap-4 md:gap-8 break-inside-auto columns-2">
                 {docs &&
                     slice.map((data, index) => (
                         <div
                             key={index}
-                            className="bg-slate-100 p-4 rounded-lg my-auto overflow-hidden"
+                            className="bg-slate-100 p-2 md:p-4 rounded-lg my-auto overflow-hidden"
                             onClick={() => hanldeClick(data, index)}
                         >
                             <div className="overflow-hidden">
@@ -60,7 +58,9 @@ const Explore = () => {
                                     className="rounded-lg max-h-80 w-full object-cover hover:scale-110 cursor-pointer"
                                 />
                             </div>
-                            <h1 className='pt-2'>{data.title}</h1>
+                            <h1 className="pt-2 font-semibold text-lg">
+                                {data.title}
+                            </h1>
                         </div>
                     ))}
             </div>
@@ -69,7 +69,15 @@ const Explore = () => {
                     LOAD MORE
                 </button>
             </div>
-            {val && <Modal2 val={val} myIndex={myIndex} setVal={setVal} setMyIndex={setMyIndex} docs={docs} />}
+            {val && (
+                <Modal2
+                    val={val}
+                    myIndex={myIndex}
+                    setVal={setVal}
+                    setMyIndex={setMyIndex}
+                    docs={docs}
+                />
+            )}
         </div>
     );
 };

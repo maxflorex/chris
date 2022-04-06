@@ -13,7 +13,8 @@ const Form = () => {
     const [myUrl, setMyUrl] = useState('');
     const [artCollection, setArtCollection] = useState('');
     const [originalAvaibale, setOriginalAvailable] = useState(true);
-    const [medium, setMedium] = useState('');
+    const [medium, setMedium] = useState('');    
+    const [imageUrl, setImageUrl] = useState(undefined);
 
     // RESET FORM
     const reset = () => {
@@ -24,6 +25,7 @@ const Form = () => {
         setArtCollection('');
         setOriginalAvailable(false);
         setMedium('');
+        setImageUrl(undefined)
     };
 
     // ON SUBMIT EVENT
@@ -47,12 +49,12 @@ const Form = () => {
 
     return (
         <div className="container mx-auto my-16">
-            <h1 className="text-2xl text-center font-bold">Upload Artwork</h1>
+            <h1 className="text-2xl text-center font-bold mb-4 md:mb-0">Upload Artwork</h1>
             <form
                 action=""
                 className="flex flex-col gap-4 items-center justify-center"
             >
-                <div className="flex flex-row gap-8 items-center">
+                <div className="md:flex md:flex-row grid  md:gap-8 gap-0 items-center">
                     <FormArtworkDetails
                         setArtworkName={setArtworkName}
                         artworkName={artworkName}
@@ -86,7 +88,7 @@ const Form = () => {
                     <FormSelectMedium medium={medium} setMedium={setMedium} />
                 </div>
 
-                <UploadArtwork setMyUrl={setMyUrl} />
+                <UploadArtwork setMyUrl={setMyUrl} setImageUrl={setImageUrl} imageUrl={imageUrl} />
                 <div className="flex gap-4">
                     {artworkName && width && height && artCollection !== '' ? (
                         <span

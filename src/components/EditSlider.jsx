@@ -51,7 +51,7 @@ const EditSlider = () => {
             slider: true,
         })
             .then(() => {
-                alert('Added to Slider!');
+                console.log('Added to Slider!');
             })
             .finally(() => {
                 reset();
@@ -64,7 +64,7 @@ const EditSlider = () => {
             slider: false,
         })
             .then(() => {
-                alert('Removed from Slider!');
+                console.log('Removed from Slider!');
             })
             .finally(() => {
                 reset();
@@ -73,7 +73,7 @@ const EditSlider = () => {
 
     return (
         <>
-            <section className="bg-slate-200 p-8">
+            <section className="bg-slate-200 py-12">
                 <h1 className="text-2xl text-center font-bold">
                     Landing Page Slider
                 </h1>
