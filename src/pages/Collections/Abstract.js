@@ -27,7 +27,7 @@ const Abstract = () => {
                                 </a>
                             </div>
                         </div>
-                        <a href='/artworks' className='btn uppercase tracking-widest bg-slate-900 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 border-0'>
+                        <a href='/explore' className='btn uppercase tracking-widest bg-slate-900 hover:bg-amber-400 ease-in-out transition duration-500 hover:scale-105 border-0'>
                             View All
                         </a>
                     </div>

@@ -54,7 +54,7 @@ const Navb = () => {
                             <Link className={linksDrop} to="/">
                                 HOME
                             </Link>
-                            <Link className={linksDrop} to="/artworks">
+                            <Link className={linksDrop} to="/explore">
                                 EXPLORE
                             </Link>
                             <Link className={linksDrop} to="/about">

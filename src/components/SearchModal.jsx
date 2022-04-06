@@ -1,8 +1,16 @@
 import { FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-import { doc, onSnapshot, query, where, updateDoc } from 'firebase/firestore';
+import {
+    doc,
+    onSnapshot,
+    query,
+    where,
+    updateDoc,
+    limit,
+} from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { colRefArtwork } from '../firebase/config';
+import { Link } from 'react-router-dom';
 
 const SearchModal = ({ setClicked, clicked }) => {
     const handleClick = (e) => {
@@ -68,17 +76,22 @@ const SearchModal = ({ setClicked, clicked }) => {
                             }
                         })
                         .map(({ title, url, id }) => (
-                            <div
-                                key={id}
-                                className="flex items-center gap-4 p-4 hover:bg-slate-100 hover:bg-opacity-50 hover:text-slate-900 mr-auto rounded-xl cursor-pointer"
-                                onClick={() => setSelected(id)}
-                            >
-                                <img
-                                    src={url}
-                                    alt="Artwork"
-                                    className="max-w-16 max-h-16 rounded-sm"
-                                />
-                                <h1 className="font-bold">{title}</h1>
+                            <div key={id}>
+                                <Link to={`artwork/${id}`}>
+                                    <div
+                                        className="flex items-center gap-4 p-4 hover:bg-slate-100 hover:bg-opacity-50 rounded-xl cursor-pointer close"
+                                        onClick={handleClick}
+                                    >
+                                        <img
+                                            src={url}
+                                            alt="Artwork"
+                                            className="max-w-16 max-h-16 rounded-sm close"
+                                        />
+                                        <h1 className="font-bold close">
+                                            {title}
+                                        </h1>
+                                    </div>
+                                </Link>
                             </div>
                         ))}
                 </div>

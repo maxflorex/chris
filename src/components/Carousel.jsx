@@ -27,7 +27,7 @@ const Carousel = () => {
                         Latests <span className="text-amber-600">Artworks</span>{' '}
                     </h1>
                     <a
-                        href="/artworks"
+                        href="/explore"
                         className="px-4 py-2 bg-amber-400 rounded-xl"
                     >
                         {' '}

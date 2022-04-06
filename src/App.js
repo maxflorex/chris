@@ -12,6 +12,7 @@ import { Abstract, Beach, CatboatsFishing, CaymanMemories, FamillyTree, Fauna, L
 import { Login } from './components/Login';
 import Form from './components/forms/Form';
 import Explore from './components/Explore';
+import Artwork from './components/Artwork';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Navb />
       {/* START */}
       <Routes>
+        <Route path={'/artwork/:id'} element={<Artwork />} />
         <Route path={'/about'} element={<About />} />
         <Route path={'/artworks'} element={<Artworks />} />
         <Route path={'/abstract'} element={<Abstract />} />

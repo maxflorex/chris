@@ -133,7 +133,7 @@ const Slideshow = ({
                         />
 
                         <a
-                            href="/artworks"
+                            href="/explore"
                             className="bg-slate-900 py-2 px-4 rounded-full text-slate-100 uppercase tracking-widest font-ligh bg-opacity-50 hover:bg-opacity-100 hover:scale-110 ease-in-out duration-300 transform-gpu text-xs"
                         >
                             Explore

@@ -71,24 +71,13 @@ export const Login = () => {
     };
 
     const items =
-        'hover:bg-slate-400 rounded-md py-4 cursor-pointer font-bold active:bg-slate-600 uppercase px-4 md:px-0';
+        'hover:bg-slate-400 rounded-md py-4 cursor-pointer font-bold active:bg-slate-600 uppercase px-4 md:px-0 text-sm';
 
     return (
-        <div className='bg-slate-200 p-8'>
-            <section className='container mx-auto'>
-                {/* REGISTER FORM */}
-
-                <FormRegistration
-                    openRegForm={openRegForm}
-                    setRegisterEmail={setRegisterEmail}
-                    setRegisterPassword={setRegisterPassword}
-                    registerAccount={registerAccount}
-                    setOpenRegForm={setOpenRegForm}
-                />
-
+        <div className="bg-slate-200 p-8">
+            <section className="container mx-auto min-h-[70vh]">
                 {/* LOGIN FORM */}
-
-                {user === null && openRegForm === false ? (
+                {user === null && (
                     <form className="flex flex-col gap-4 items-center my-16">
                         <h1 className="text-2xl text-slate-900 text-center mb-2">
                             Login
@@ -113,16 +102,8 @@ export const Login = () => {
                             <span className="btn btn-active" onClick={login}>
                                 Login
                             </span>
-                            <span
-                                className="btn btn-active btn-accent"
-                                onClick={() => setOpenRegForm(!openRegForm)}
-                            >
-                                Need an account?
-                            </span>
                         </div>
                     </form>
-                ) : (
-                    ''
                 )}
 
                 {/* WELCOME & LOGOUT */}
