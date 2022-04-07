@@ -35,20 +35,20 @@ const Carousel = () => {
                     </a>
                 </div>
 
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mx-4 md:mx-0 pb-6 md:pb-0">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mx-4 md:mx-0 pb-6 md:pb-0">
                     {featured && featured.map(({id, url, title, tall, wide}) => (
                         <div key={id}>
                             <div className="">
                                 <img
                                     src={url}
                                     alt={title}
-                                    className="w-full h-48 md:h-64 object-cover rounded-lg"
+                                    className="w-full h-40 md:h-64 object-cover rounded-lg relative"
                                 />
-                                <div className="flex justify-between mt-3 mb-8">
-                                    <h4 className="text-xs bg-white p-1 md:px-3 rounded-full">
+                                <div className="flex flex-col-reverse lg:flex-row justify-between mt-2 mb-8 gap-1 items-start lg:mt-3">
+                                    <h4 className="text-xs bg-white p-1 md:px-3 rounded-full m-auto lg:m-0">
                                         {wide + 'X' + tall} 
                                     </h4>
-                                    <h1 className="font-bold">{title}</h1>
+                                    <h1 className="text-sm m-auto lg:m-0 text-center lg:text-right p-1 font-semibold">{title}</h1>
                                 </div>
                             </div>
                         </div>

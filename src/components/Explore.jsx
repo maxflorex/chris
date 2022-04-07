@@ -37,11 +37,11 @@ const Explore = () => {
 
     return (
         <div className="bg-slate-200 p-4 text-slate-900">
-            <div className="container mx-auto grid justify-items-center gap-2 md:my-16 my-8">
+            <div className="container mx-auto grid justify-items-center gap-2 md:mt-16 md:mb-12">
                 <span className="btn btn-sm border-0 bg-amber-400">
                     Explore
                 </span>
-                <h1 className="font-semibold text-xl md:text-2xl uppercase">By Chris Christian </h1>
+                <h1 className="font-semibold text-xl md:text-2xl uppercase md:mb-0 mb-8">By Chris Christian </h1>
             </div>
             <div className="grid grid-cols-2 w-full md:w-1/2 xl:w-1/4 mx-auto gap-4 md:gap-8 break-inside-auto columns-2">
                 {docs &&

@@ -83,7 +83,7 @@ const Navb = () => {
 
                         {/* SEARCH */}
 
-                        <div className="text-xs">
+                        <div className="text-xs z-50">
                             <div className="bg-slate-100 text-slate-900 hover:bg-amber-400 hover:text-slate-900 px-4 py-2 rounded-lg ease-in-out hover:scale-110 duration-500" onClick={() => setClicked(!clicked)}>
                                 <FiSearch className="text-slate-900" />
                             </div>

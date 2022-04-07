@@ -82,12 +82,12 @@ const EditArtworks = ({ selectedCollection }) => {
                             <img
                                 src={data.url}
                                 alt="PictureLatest"
-                                className="rounded-lg max-h-48 md:h-96 object-cover w-full"
+                                className="rounded-lg h-48 md:max-h-64 object-cover w-full"
                             />
-                            <div className="flex flex-row gap-2 absolute bottom-0 right-0 m-4">
+                            <div className="grid md:flex gap-2 absolute bottom-0 right-0 m-4">
                                 {edit !== data.id ? (
                                     <button
-                                        className="btn btn-sm btn-info"
+                                        className="btn btn-sm lg:btn-sm btn-info"
                                         onClick={() => setEdit(data.id)}
                                     >
                                         EDIT
@@ -98,14 +98,14 @@ const EditArtworks = ({ selectedCollection }) => {
                                         updateH === '' ||
                                         updateW === '' ? (
                                             <button
-                                                className="btn btn-sm btn-ghost disabled"
+                                                className="btn btn-sm lg:btn-sm btn-ghost disabled"
                                                 onClick={() => setEdit(data.id)}
                                             >
                                                 FILL OUT FORM
                                             </button>
                                         ) : (
                                             <button
-                                                className="btn btn-sm btn-accent"
+                                                className="btn btn-sm lg:btn-sm btn-accent"
                                                 onClick={() =>
                                                     updateArtwork(data.id)
                                                 }
@@ -119,7 +119,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                 {/* MODAL */}
                                 <label
                                     htmlFor="my-modal-4"
-                                    className="btn modal-button btn-sm btn-error"
+                                    className="btn modal-button btn-sm lg:btn-sm btn-error"
                                     onClick={() => setMyId(data)}
                                 >
                                     DELETE
@@ -151,7 +151,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                             {/* CONTENT */}
 
                                             <button
-                                                className="btn btn-sm border-0 btn-error"
+                                                className="btn btn-sm lg:btn-sm border-0 btn-error"
                                                 onClick={() =>
                                                     deleteArtwork(myId.id)
                                                 }
@@ -159,7 +159,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                                 YES, DELETE
                                             </button>
                                             <button
-                                                className="btn btn-sm border-0 btn-warning"
+                                                className="btn btn-sm lg:btn-sm border-0 btn-warning"
                                                 onClick={() => {
                                                     document
                                                         .getElementById(
@@ -228,7 +228,7 @@ const EditArtworks = ({ selectedCollection }) => {
                             </>
                         ) : (
                             <>
-                                <div className="flex flex-wrap justify-between items-center">
+                                <div className="flex flex-col lg:flex-row justify-between items-center">
                                     <h1 className="text-lg py-2">
                                         {data.title}
                                     </h1>
@@ -240,7 +240,7 @@ const EditArtworks = ({ selectedCollection }) => {
                         )}
                         {edit === data.id && (
                             <button
-                                className="btn btn-warning btn-sm mt-4 mx-4"
+                                className="btn btn-warning btn-sm mx-4"
                                 onClick={() => reset()}
                             >
                                 RESET

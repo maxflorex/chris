@@ -21,7 +21,7 @@ const Collections = () => {
         const colImage =
             'flex flex-col gap-4 justify-center items-center indicator w-full relative cursor-pointer';
 
-        const colPic = 'md:hover:scale-105 transform-gpu transition-all duration-500 bg-cover rounded-lg overflow-hiddeng max-h-48 w-full object-cover opacity-30 hover:opacity-100'
+        const colPic = 'md:hover:scale-105 transform-gpu transition-all duration-500 bg-cover rounded-lg overflow-hiddeng h-48 w-full object-cover opacity-30 hover:opacity-100'
 
         const colText = "font-semibold absolute bottom-0 pb-6 uppercase text-white md:text-xl tra"
 
@@ -30,7 +30,7 @@ const Collections = () => {
         return (
             <div className="grid bg-slate-900 p-4 min-h-[80vh]">
                 <div className="my-8 xl:w-1/2 md:w-2/3 w-full mx-auto">
-                    <h1 className="text-2xl font-bold py-8 text-center">
+                    <h1 className="text-2xl font-bold pb-8 pt-4 md:pb-8 text-center">
                         Artwork Collections
                     </h1>
                     <div className="container grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center gap-8 mx-auto">

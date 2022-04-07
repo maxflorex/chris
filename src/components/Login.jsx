@@ -173,7 +173,7 @@ export const Login = () => {
                             {/* PANEL ENDS */}
                             {/* CONTENT */}
 
-                            <div className="p-2 rounded-xl xl:w-[80vw]  md:w-[75vw] w-full md:p-8 ">
+                            <div className="p-0 rounded-xl xl:w-[80vw]  md:w-[75vw] w-full md:p-8 ">
                                 {route === 1 ? (
                                     <Form />
                                 ) : route === 2 ? (

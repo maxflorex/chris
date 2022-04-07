@@ -193,7 +193,7 @@ const EditSlider = () => {
                         .map(({ title, url, id }) => (
                             <div
                                 key={id}
-                                className="flex items-center gap-4 p-4 hover:bg-slate-100 mr-auto rounded-xl cursor-pointer"
+                                className="flex items-center gap-4 py-4 hover:bg-slate-100 mr-auto rounded-xl cursor-pointer"
                                 onClick={() => setSelected(id)}
                             >
                                 <input
@@ -207,7 +207,7 @@ const EditSlider = () => {
                                     alt="Artwork"
                                     className="max-w-16 max-h-16 rounded-sm"
                                 />
-                                <h1 className="font-bold">{title}</h1>
+                                <h1 className="font-semibold font-xs">{title}</h1>
                                 {selected === id ? (
                                     <button
                                         className="btn btn-info btn-sm"
