@@ -192,14 +192,13 @@ const EditFeaturedArtwork = () => {
                         .map(({ title, url, id }) => (
                             <div
                                 key={id}
-                                className="flex items-center gap-4 py-4 hover:bg-slate-100 mr-auto rounded-xl cursor-pointer"
+                                className="flex items-center gap-4 py-4 px-4 hover:bg-slate-100 mr-auto rounded-xl cursor-pointer"
                                 onClick={() => setSelected(id)}
                             >
                                 <input
                                     type="checkbox"
-                                    className="checkbox bg-slate-300"
+                                    className="checkbox bg-slate-300 hidden md:block"
                                     checked={selected === id ? 'selected' : ''}
-                                    onChange={() => setSelected(id)}
                                 />
                                 <img
                                     src={url}

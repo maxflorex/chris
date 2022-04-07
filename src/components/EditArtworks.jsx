@@ -10,6 +10,7 @@ import {
 import { colRefArtwork } from '../firebase/config';
 import FormSelectCollection from './forms/FormSelectCollection';
 import FormSelectMedium from './forms/FormSelectMedium';
+import FormPrice from './forms/FormPrice';
 
 const EditArtworks = ({ selectedCollection }) => {
     const [docs, setDocs] = useState([]);
@@ -20,7 +21,8 @@ const EditArtworks = ({ selectedCollection }) => {
     const [edit, setEdit] = useState('');
     const selected = selectedCollection.split(' ').join('');
     const [myId, setMyId] = useState('');
-    const [medium, setMedium] = useState('')
+    const [medium, setMedium] = useState('');
+    const [price, setPrice] = useState('');
 
     // DATA QUERY - GET ELEMENTS BY COLLECTION
     const q = query(colRefArtwork, where('collection', '==', `${selected}`));
@@ -51,6 +53,7 @@ const EditArtworks = ({ selectedCollection }) => {
             tall: updateH,
             collection: artCollection,
             medium: medium,
+            price: price,
         })
             .then(() => {
                 alert('Updated!');
@@ -67,8 +70,12 @@ const EditArtworks = ({ selectedCollection }) => {
         setUpdateH('');
         setUpdateW('');
         setArtCollection('');
-        setMedium('')
+        setMedium('');
+        setPrice('');
     };
+
+    // STYLES
+    const formStyle = 'input input-ghost w-full mt-4 border-1 border-slate-300';
 
     return (
         <>
@@ -187,7 +194,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                     onChange={(e) => {
                                         setUpdateTitle(e.target.value);
                                     }}
-                                    className="input input-ghost w-full mt-4"
+                                    className={formStyle}
                                     placeholder={data.title}
                                 />
 
@@ -198,7 +205,7 @@ const EditArtworks = ({ selectedCollection }) => {
                                         onChange={(e) => {
                                             setUpdateW(e.target.value);
                                         }}
-                                        className="input input-ghost w-full mt-4"
+                                        className={formStyle}
                                         placeholder={data.wide}
                                     />
                                     {/* HEIGHT */}
@@ -207,8 +214,20 @@ const EditArtworks = ({ selectedCollection }) => {
                                         onChange={(e) => {
                                             setUpdateH(e.target.value);
                                         }}
-                                        className="input input-ghost w-full mt-4"
+                                        className={formStyle}
                                         placeholder={data.tall}
+                                    />
+                                </div>
+                                {/* PRICE */}
+                                <div className="w-full flex gap-4 items-center text-semibold">
+                                    <h1 className='text-lg mt-4'>$</h1>
+                                    <input
+                                        type="number"
+                                        onChange={(e) => {
+                                            setPrice(e.target.value);
+                                        }}
+                                        className={formStyle}
+                                        placeholder={data.price}
                                     />
                                 </div>
                                 {/* COLLECTION */}
@@ -218,18 +237,17 @@ const EditArtworks = ({ selectedCollection }) => {
                                         artCollection={artCollection}
                                         current={data.collection}
                                     />
-                                        <FormSelectMedium 
+                                    <FormSelectMedium
                                         setMedium={setMedium}
                                         medium={medium}
                                         current={data.medium}
-                                    
-                                        />
+                                    />
                                 </div>
                             </>
                         ) : (
                             <>
-                                <div className="flex flex-col lg:flex-row justify-between items-center">
-                                    <h1 className="text-lg py-2">
+                                <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
+                                    <h1 className="text-lg py-0 lg:py-2 ">
                                         {data.title}
                                     </h1>
                                     <h1 className="font-bold">

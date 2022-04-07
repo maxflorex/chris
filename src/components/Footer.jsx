@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <>
             <div className="bg-slate-900">
-                <div className="container flex p-16 flex-wrap justify-between mx-auto align-middle justify-items-center">
+                <div className="container flex p-6 lg:p-16 flex-wrap justify-between mx-auto align-middle justify-items-center">
                     <div className="justify-items-center aliggn-middle">
                         <a href="/">
                             <img src={ccIcon} alt="Logo Short" width={120} />

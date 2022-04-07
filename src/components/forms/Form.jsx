@@ -5,6 +5,7 @@ import FormSelectCollection from './FormSelectCollection';
 import { colRefArtwork } from '../../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import FormSelectMedium from './FormSelectMedium';
+import FormPrice from './FormPrice';
 
 const Form = () => {
     const [height, setHeight] = useState('');
@@ -13,8 +14,9 @@ const Form = () => {
     const [myUrl, setMyUrl] = useState('');
     const [artCollection, setArtCollection] = useState('');
     const [originalAvaibale, setOriginalAvailable] = useState(true);
-    const [medium, setMedium] = useState('');    
+    const [medium, setMedium] = useState('');
     const [imageUrl, setImageUrl] = useState(undefined);
+    const [price, setPrice] = useState('');
 
     // RESET FORM
     const reset = () => {
@@ -25,7 +27,8 @@ const Form = () => {
         setArtCollection('');
         setOriginalAvailable(false);
         setMedium('');
-        setImageUrl(undefined)
+        setImageUrl(undefined);
+        setPrice('');
     };
 
     // ON SUBMIT EVENT
@@ -39,6 +42,7 @@ const Form = () => {
             collection: artCollection,
             url: myUrl,
             medium: medium,
+            price: price,
             sold: originalAvaibale,
             createdAt: serverTimestamp(),
         }).then(() => {
@@ -49,7 +53,9 @@ const Form = () => {
 
     return (
         <div className="container mx-auto my-16">
-            <h1 className="text-2xl text-center font-bold mb-4 md:mb-0">Upload Artwork</h1>
+            <h1 className="text-2xl text-center font-bold mb-4 md:mb-0">
+                Upload Artwork
+            </h1>
             <form
                 action=""
                 className="flex flex-col gap-4 items-center justify-center"
@@ -68,6 +74,10 @@ const Form = () => {
                         setArtCollection={setArtCollection}
                         artCollection={artCollection}
                     />
+                </div>
+                <div className="flex justify-center items-center gap-4">
+                    <h1 className='text-lg'>$</h1>
+                    <FormPrice price={price} setPrice={setPrice} />
                 </div>
                 <div className="flex mb-8 items-center gap-8">
                     <div className="flex gap-2">
@@ -88,7 +98,11 @@ const Form = () => {
                     <FormSelectMedium medium={medium} setMedium={setMedium} />
                 </div>
 
-                <UploadArtwork setMyUrl={setMyUrl} setImageUrl={setImageUrl} imageUrl={imageUrl} />
+                <UploadArtwork
+                    setMyUrl={setMyUrl}
+                    setImageUrl={setImageUrl}
+                    imageUrl={imageUrl}
+                />
                 <div className="flex gap-4">
                     {artworkName && width && height && artCollection !== '' ? (
                         <span

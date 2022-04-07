@@ -4,7 +4,7 @@ const FormSelectCollection = ({ setArtCollection, artCollection }) => {
     const selector = 'btn';
 
     return (
-        <div className="dropdown my-8">
+        <div className="dropdown dropdown-left my-8">
             <div
                 tabIndex="0"
                 className="flex gap-4 btn bg-slate-300 border-0 text-slate-900 hover:bg-amber-400"

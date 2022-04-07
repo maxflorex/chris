@@ -7,7 +7,7 @@ export const FormArtworkDetails = ({
     setHeight,
     height,
 }) => {
-    const numbers = 'input w-24 text-white';
+    const numbers = 'input w-24';
 
     return (
         <div>
@@ -18,7 +18,7 @@ export const FormArtworkDetails = ({
                     onChange={(e) => {
                         setArtworkName(e.target.value);
                     }}
-                    className="input w-full max-w-xl text-white"
+                    className="input w-full max-w-xl"
                     value={artworkName}
                 />
 

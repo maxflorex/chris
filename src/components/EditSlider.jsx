@@ -198,9 +198,8 @@ const EditSlider = () => {
                             >
                                 <input
                                     type="checkbox"
-                                    className="checkbox bg-slate-300"
+                                    className="checkbox bg-slate-300 hidden md:block"
                                     checked={selected === id ? 'selected' : ''}
-                                    onChange={() => setSelected(id)}
                                 />
                                 <img
                                     src={url}

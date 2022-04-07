@@ -111,10 +111,12 @@ export const Login = () => {
                 {user && (
                     <>
                         <div className="grid grid-cols-1 mb-8 text-slate-900">
-                            <div className="bg-slate-300 rounded-xl p-8 flex justify-between align-middle content-center">
+                            <div className="bg-slate-300 rounded-xl p-8 flex justify-between align-middle content-center font-semibold ">
                                 <div>
                                     <p>Welcome!</p>
-                                    <h1 className="text-xl">{user?.email}</h1>
+                                    <h1 className="text-lg md:text-xl">
+                                        {user?.email}
+                                    </h1>
                                 </div>
                                 <button
                                     className="btn ml-auto"
@@ -185,15 +187,15 @@ export const Login = () => {
                                 ) : route === 5 ? (
                                     <Graph />
                                 ) : (
-                                    <div className="flex flex-col p-8 justify-center items-center">
-                                        <h1 className="mb-16 font-bold up">
-                                            Artwork Time!
-                                        </h1>
+                                    <div className="flex flex-col p-8 justify-center items-center mt-16 gap-8">
                                         <img
                                             src="/undraw_skateboard_d6or.svg"
                                             alt="Welcome"
                                             className="md:w-1/2"
                                         />
+                                        <h1 className="font-bold">
+                                            Artwork Time!
+                                        </h1>
                                     </div>
                                 )}
                             </div>

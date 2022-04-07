@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebase/config';
 import { FiDownloadCloud } from 'react-icons/fi';
+import ProgressBar from './ProgressBar';
 
 const UploadArtwork = ({ setMyUrl, setImageUrl, imageUrl }) => {
+    const [file, setFile] = useState(null);
+    const [myProgress, setMyProgress] = useState(0);
+
     // UPLOAD FILES
     const uploadFiles = () => {
         document.getElementById('files').click();
@@ -34,22 +38,17 @@ const UploadArtwork = ({ setMyUrl, setImageUrl, imageUrl }) => {
                 const progress =
                     (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 console.log('Upload is ' + progress + '% done');
-                switch (snapshot.state) {
-                    case 'paused':
-                        console.log('Upload is paused');
-                        break;
-                    case 'running':
-                        console.log('Upload is running');
-                        break;
-                }
+                setFile(file);
+                setMyProgress(progress);
             },
             (error) => {
                 console.log(error);
+                setFile(null);
             },
             () => {
                 // UPLOAD COMPLETE - WE CAN GET URL NOW
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    imageUrl(downloadURL);
+                    setMyUrl(downloadURL);
                 });
             }
         );
@@ -58,16 +57,19 @@ const UploadArtwork = ({ setMyUrl, setImageUrl, imageUrl }) => {
     };
 
     // MESSAGE BESIDE THE UPLOAD BTN
-    let txt =
-        selectedImage === undefined ? 'Upload Artwork' : 'Artwork Uploaded!';
+    let txt = myProgress !== 100 ? 'Upload Artwork' : 'Artwork Uploaded!';
+
+    const fileMessage = `text-xl ${
+        myProgress === 100 ? 'font-semibold text-slate-900' : 'text-slate-400'
+    }`;
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     return (
-        <div>
+        <div className="w-full px-16 pb-8">
             <div className="flex gap-4 justify-center content-center items-center">
-                <h1 className="">{txt}</h1>
-                <div className="bg-slate-300 hover:bg-slate-100 p-4 rounded-2xl cursor-pointer mb-8">
+                <h1 className={fileMessage}>{txt}</h1>
+                <div className="bg-slate-300 hover:bg-slate-100 p-4 rounded-2xl cursor-pointer">
                     <FiDownloadCloud
                         onClick={uploadFiles}
                         className="text-4xl"
@@ -89,10 +91,18 @@ const UploadArtwork = ({ setMyUrl, setImageUrl, imageUrl }) => {
                         alt={selectedImage}
                         className="w-80 rounded-lg"
                     />
-                    <h1 className="text-xs mt-8">
+                    <h1 className="mt-8 text-xs">
                         {selectedImage === undefined ? '' : selectedImage.name}
                     </h1>
                 </div>
+            )}
+            {imageUrl && (
+                <ProgressBar
+                    file={file}
+                    setFile={setFile}
+                    myProgress={myProgress}
+                    setMyProgress={setMyProgress}
+                />
             )}
         </div>
     );
