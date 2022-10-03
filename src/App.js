@@ -9,8 +9,6 @@ import Artworks from './pages/Artworks';
 import ErrorPage from './pages/Collections/ErrorPage';
 import Dashboard from './pages/Dashboard';
 import { Abstract, Beach, CatboatsFishing, CaymanMemories, FamillyTree, Fauna, LiquidFlow, Woman } from './pages/Collections/index'
-import { Login } from './components/Login';
-import Form from './components/forms/Form';
 import Explore from './components/Explore';
 import Artwork from './components/Artwork';
 
@@ -32,7 +30,7 @@ function App() {
         <Route path={'/liquid-flow'} element={<LiquidFlow />} />
         <Route path={'/woman'} element={<Woman />} />
         <Route path={'/login'} element={<Dashboard />} />
-        <Route path={'/fauna' }element={<Fauna />} />
+        <Route path={'/fauna'} element={<Fauna />} />
         <Route path={'/family-tree'} element={<FamillyTree />} />
         <Route path={'/beach'} element={<Beach />} />
         <Route path={'/collections'} element={<Collections />} />

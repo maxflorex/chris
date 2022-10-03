@@ -1,4 +1,3 @@
-import { FormRegistration } from './forms/FormRegistration';
 import { useState } from 'react';
 import {
     createUserWithEmailAndPassword,

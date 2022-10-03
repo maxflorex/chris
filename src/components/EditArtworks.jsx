@@ -10,7 +10,6 @@ import {
 import { colRefArtwork } from '../firebase/config';
 import FormSelectCollection from './forms/FormSelectCollection';
 import FormSelectMedium from './forms/FormSelectMedium';
-import FormPrice from './forms/FormPrice';
 
 const EditArtworks = ({ selectedCollection }) => {
     const [docs, setDocs] = useState([]);
