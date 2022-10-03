@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Featured = ({ title, imageSrc, size, medium, desc, sold }) => {
+const Featured = ({ title, imageSrc, size, medium, sold }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     return (

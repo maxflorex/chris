@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { doc, getDoc, collection, onSnapshot, query } from 'firebase/firestore';
-import { colRefArtwork, db } from '../firebase/config';
-import { collAbstract } from '../images';
+import { doc, onSnapshot } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 const Artwork = () => {
     const { id } = useParams();
